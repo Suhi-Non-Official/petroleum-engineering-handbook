@@ -345,12 +345,12 @@ body {
 
 .reader-viewport {
   flex: 1;
-  overflow: auto;
+  overflow: hidden;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 1.5rem;
-  background: #090d16;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 0;
+  background: #525659;
 }
 
 .page-card {
