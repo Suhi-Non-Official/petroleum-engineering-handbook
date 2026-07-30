@@ -1,5 +1,15 @@
 import React, { useState } from 'react';
-import { X, Wrench, RefreshCw, Calculator, ArrowRightLeft, BookMarked } from 'lucide-react';
+import { X, Wrench, Calculator, ArrowRightLeft } from 'lucide-react';
+
+const UNITS_MAP = {
+  pressure: { psi: 1.0, bar: 14.5038, kPa: 0.145038, MPa: 145.038, atm: 14.6959 },
+  length: { ft: 1.0, m: 3.28084, in: 0.0833333, km: 3280.84 },
+  volume: { bbl: 1.0, m3: 6.28981, ft3: 0.178108, gal: 0.0238095 },
+  flow_rate: { 'bbl/d': 1.0, 'm3/d': 6.28981, 'Mscf/d': 0.178108, 'MMscf/d': 178.108 },
+  viscosity: { cp: 1.0, 'mPa.s': 1.0, 'Pa.s': 1000.0 },
+  permeability: { md: 1.0, D: 1000.0 },
+  density: { 'lbm/gal': 1.0, 'lbm/ft3': 0.133681, 'g/cm3': 8.3454, 'kg/m3': 0.0083454 }
+};
 
 export default function ToolsPanel({ isOpen, onClose }) {
   const [activeTab, setActiveTab] = useState('converter');
@@ -29,51 +39,68 @@ export default function ToolsPanel({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
-  const handleConvert = async () => {
-    try {
-      const res = await fetch('/api/tools/convert', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          value: parseFloat(valInput),
-          category,
-          from_unit: fromUnit,
-          to_unit: toUnit
-        })
+  // Pure Client-Side Unit Conversion (Works 100% on GitHub Pages!)
+  const handleConvert = () => {
+    const val = parseFloat(valInput) || 0;
+    if (category === 'temperature') {
+      let res = val;
+      if (fromUnit === 'degF' && toUnit === 'degC') res = (val - 32) * (5 / 9);
+      else if (fromUnit === 'degC' && toUnit === 'degF') res = val * (9 / 5) + 32;
+      else if (fromUnit === 'degF' && toUnit === 'K') res = (val - 32) * (5 / 9) + 273.15;
+      else if (fromUnit === 'K' && toUnit === 'degF') res = (val - 273.15) * (9 / 5) + 32;
+      else if (fromUnit === 'degC' && toUnit === 'K') res = val + 273.15;
+      else if (fromUnit === 'K' && toUnit === 'degC') res = val - 273.15;
+
+      setConvertedResult({
+        value: Math.round(res * 10000) / 10000,
+        formula: `Temperature conversion from ${fromUnit} to ${toUnit}`
       });
-      const data = await res.json();
-      setConvertedResult(data);
-    } catch (e) {
-      console.error(e);
+      return;
+    }
+
+    const cat = UNITS_MAP[category];
+    if (cat && cat[fromUnit] && cat[toUnit]) {
+      const baseVal = val * cat[fromUnit];
+      const converted = baseVal / cat[toUnit];
+      setConvertedResult({
+        value: Math.round(converted * 10000) / 10000,
+        formula: `${val} ${fromUnit} * (${cat[fromUnit]} / ${cat[toUnit]}) = ${Math.round(converted * 10000) / 10000} ${toUnit}`
+      });
     }
   };
 
-  const handleCalcDarcy = async () => {
-    try {
-      const res = await fetch('/api/tools/calculate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ calc_type: 'darcy_liquid', params: darcyParams })
-      });
-      const data = await res.json();
-      setDarcyResult(data);
-    } catch (e) {
-      console.error(e);
-    }
+  // Pure Client-Side Darcy Radial Flow Calculator
+  const handleCalcDarcy = () => {
+    const { k_md, h_ft, p_diff_psi, mu_cp, b_vol, r_w_ft, r_e_ft } = darcyParams;
+    const ln_ratio = Math.log(r_e_ft / r_w_ft);
+    const numerator = 0.00708 * k_md * h_ft * p_diff_psi;
+    const denominator = mu_cp * b_vol * ln_ratio;
+    const q = numerator / denominator;
+
+    setDarcyResult({
+      flow_rate_stbd: Math.round(q * 100) / 100,
+      formula: 'q = (0.00708 * k * h * ΔP) / (μ * B * ln(re/rw))',
+      steps: [
+        `1. Compute ln(re/rw) = ln(${r_e_ft}/${r_w_ft}) = ${Math.round(ln_ratio * 10000) / 10000}`,
+        `2. Numerator = 0.00708 * ${k_md} * ${h_ft} * ${p_diff_psi} = ${Math.round(numerator * 100) / 100}`,
+        `3. Denominator = ${mu_cp} * ${b_vol} * ${Math.round(ln_ratio * 10000) / 10000} = ${Math.round(denominator * 100) / 100}`,
+        `4. Result q = ${Math.round(q * 100) / 100} STB/D`
+      ],
+      reference: 'Petroleum Engineering Handbook Vol 1 & Vol 5'
+    });
   };
 
-  const handleCalcHydro = async () => {
-    try {
-      const res = await fetch('/api/tools/calculate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ calc_type: 'hydrostatic', params: hydroParams })
-      });
-      const data = await res.json();
-      setHydroResult(data);
-    } catch (e) {
-      console.error(e);
-    }
+  // Pure Client-Side Hydrostatic Pressure Calculator
+  const handleCalcHydro = () => {
+    const { mud_weight_ppg, tvd_ft } = hydroParams;
+    const gradient = 0.052 * mud_weight_ppg;
+    const p_hydro = gradient * tvd_ft;
+
+    setHydroResult({
+      pressure_psi: Math.round(p_hydro * 100) / 100,
+      gradient_psi_ft: Math.round(gradient * 10000) / 10000,
+      reference: 'Petroleum Engineering Handbook Vol 2 (Drilling Engineering Ch. 1)'
+    });
   };
 
   const unitOptions = {
@@ -212,7 +239,7 @@ export default function ToolsPanel({ isOpen, onClose }) {
                     type="number"
                     className="form-input"
                     value={darcyParams.k_md}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, k_md: parseFloat(e.target.value) })}
+                    onChange={(e) => setDarcyParams({ ...darcyParams, k_md: parseFloat(e.target.value) || 0 })}
                   />
                 </div>
                 <div className="form-group">
@@ -221,7 +248,7 @@ export default function ToolsPanel({ isOpen, onClose }) {
                     type="number"
                     className="form-input"
                     value={darcyParams.h_ft}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, h_ft: parseFloat(e.target.value) })}
+                    onChange={(e) => setDarcyParams({ ...darcyParams, h_ft: parseFloat(e.target.value) || 0 })}
                   />
                 </div>
                 <div className="form-group">
@@ -230,7 +257,7 @@ export default function ToolsPanel({ isOpen, onClose }) {
                     type="number"
                     className="form-input"
                     value={darcyParams.p_diff_psi}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, p_diff_psi: parseFloat(e.target.value) })}
+                    onChange={(e) => setDarcyParams({ ...darcyParams, p_diff_psi: parseFloat(e.target.value) || 0 })}
                   />
                 </div>
                 <div className="form-group">
@@ -239,7 +266,7 @@ export default function ToolsPanel({ isOpen, onClose }) {
                     type="number"
                     className="form-input"
                     value={darcyParams.mu_cp}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, mu_cp: parseFloat(e.target.value) })}
+                    onChange={(e) => setDarcyParams({ ...darcyParams, mu_cp: parseFloat(e.target.value) || 0 })}
                   />
                 </div>
                 <div className="form-group">
@@ -248,7 +275,7 @@ export default function ToolsPanel({ isOpen, onClose }) {
                     type="number"
                     className="form-input"
                     value={darcyParams.b_vol}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, b_vol: parseFloat(e.target.value) })}
+                    onChange={(e) => setDarcyParams({ ...darcyParams, b_vol: parseFloat(e.target.value) || 0 })}
                   />
                 </div>
                 <div className="form-group">
@@ -257,7 +284,7 @@ export default function ToolsPanel({ isOpen, onClose }) {
                     type="number"
                     className="form-input"
                     value={darcyParams.r_e_ft}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, r_e_ft: parseFloat(e.target.value) })}
+                    onChange={(e) => setDarcyParams({ ...darcyParams, r_e_ft: parseFloat(e.target.value) || 0 })}
                   />
                 </div>
               </div>
@@ -299,7 +326,7 @@ export default function ToolsPanel({ isOpen, onClose }) {
                     type="number"
                     className="form-input"
                     value={hydroParams.mud_weight_ppg}
-                    onChange={(e) => setHydroParams({ ...hydroParams, mud_weight_ppg: parseFloat(e.target.value) })}
+                    onChange={(e) => setHydroParams({ ...hydroParams, mud_weight_ppg: parseFloat(e.target.value) || 0 })}
                   />
                 </div>
                 <div className="form-group">
@@ -308,7 +335,7 @@ export default function ToolsPanel({ isOpen, onClose }) {
                     type="number"
                     className="form-input"
                     value={hydroParams.tvd_ft}
-                    onChange={(e) => setHydroParams({ ...hydroParams, tvd_ft: parseFloat(e.target.value) })}
+                    onChange={(e) => setHydroParams({ ...hydroParams, tvd_ft: parseFloat(e.target.value) || 0 })}
                   />
                 </div>
               </div>

@@ -12,13 +12,20 @@ export default function Reader({
 }) {
   const [zoom, setZoom] = useState(100);
   const [viewMode, setViewMode] = useState('canvas'); // Default to High-Resolution Image View
+  const [imgError, setImgError] = useState(false);
 
   const handlePrev = () => {
-    if (pdfPage > 1) onNavigate(pdfPage - 1);
+    if (pdfPage > 1) {
+      setImgError(false);
+      onNavigate(pdfPage - 1);
+    }
   };
 
   const handleNext = () => {
-    if (pdfPage < totalPages) onNavigate(pdfPage + 1);
+    if (pdfPage < totalPages) {
+      setImgError(false);
+      onNavigate(pdfPage + 1);
+    }
   };
 
   const handleZoomIn = () => setZoom((z) => Math.min(z + 15, 200));
@@ -36,7 +43,6 @@ export default function Reader({
     );
   };
 
-  // Image source path fallback for static GitHub Pages hosting
   const imageSrc = `/api/page-image/${volId}/${pdfPage}`;
   const staticFallbackSrc = `./data/previews/${volId}/page_${pdfPage}.jpg`;
 
@@ -55,7 +61,10 @@ export default function Reader({
               value={pdfPage}
               min={1}
               max={totalPages}
-              onChange={(e) => onNavigate(parseInt(e.target.value) || 1)}
+              onChange={(e) => {
+                setImgError(false);
+                onNavigate(parseInt(e.target.value) || 1);
+              }}
             />{' '}
             / {totalPages}
           </span>
@@ -79,8 +88,11 @@ export default function Reader({
           </button>
 
           <button
-            className={`btn-icon ${viewMode === 'canvas' ? 'active' : ''}`}
-            onClick={() => setViewMode(viewMode === 'canvas' ? 'text' : 'canvas')}
+            className={`btn-icon ${viewMode === 'canvas' && !imgError ? 'active' : ''}`}
+            onClick={() => {
+              setImgError(false);
+              setViewMode(viewMode === 'canvas' ? 'text' : 'canvas');
+            }}
             title="Toggle View Mode (High-Res Image / Text)"
           >
             <ImageIcon size={16} />
@@ -108,7 +120,7 @@ export default function Reader({
             <span>HANDBOOK PAGE {pageData?.printed_page || pdfPage} (PDF P. {pdfPage})</span>
           </div>
 
-          {viewMode === 'canvas' ? (
+          {viewMode === 'canvas' && !imgError ? (
             <div>
               <div style={{ background: 'rgba(245, 158, 11, 0.15)', color: 'var(--accent-amber)', padding: '0.4rem 0.75rem', borderRadius: '4px', fontSize: '0.75rem', marginBottom: '1rem', fontWeight: 600 }}>
                 High-Resolution Original PDF Image View Active
@@ -116,8 +128,11 @@ export default function Reader({
               <img
                 src={imageSrc}
                 onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = staticFallbackSrc;
+                  if (e.target.src.includes('/api/')) {
+                    e.target.src = staticFallbackSrc;
+                  } else {
+                    setImgError(true);
+                  }
                 }}
                 alt={`Page ${pdfPage}`}
                 className="scanned-image-view"
