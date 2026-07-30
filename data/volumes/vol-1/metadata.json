@@ -1,0 +1,1387 @@
+{
+  "vol_id": "vol-1",
+  "title": "Volume 1: General Engineering",
+  "filename": "Vol 1.pdf",
+  "page_count": 872,
+  "total_words": 306680,
+  "ocr_pages_count": 40,
+  "toc": [
+    {
+      "num": "1",
+      "title": "COVER",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": "Ebooks Chemical Engineering",
+      "page": 2,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": "Mathematics of Vibrating Systems",
+      "page": 9,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".1 Introduction",
+      "page": 9,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".2 Introductory Thoughts About Vibrations",
+      "page": 14,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".3 Vibration Theory",
+      "page": 14,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".4 Wave Propagation",
+      "page": 16,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".5 Wave Behavior",
+      "page": 17,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".6 Equivalent Springs",
+      "page": 19,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".7 Boundary and Initial Conditions",
+      "page": 19,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".8 Mechanical Vibration Analysis",
+      "page": 20,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".9 SDOF System",
+      "page": 21,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".10 Two-Degree-of-Freedom (2DOF) Systems",
+      "page": 32,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".11 Continuous Systems",
+      "page": 42,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".12 Wave Reflection From Various Geometric Boundaries",
+      "page": 44,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 45
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 47
+        },
+        {
+          "num": "",
+          "title": "Suggested Reading",
+          "page": 48
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 50
+        },
+        {
+          "num": "",
+          "title": "Appendix\u2014Glossary of Vibration Theory Terms",
+          "page": 50
+        }
+      ]
+    },
+    {
+      "num": "2",
+      "title": "Mathematics of Fluid Flow",
+      "page": 53,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".1 Introduction",
+      "page": 53,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".2 Partial Differential Equations",
+      "page": 53,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".3 Vector Analysis",
+      "page": 59,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".4 Numerical Methods",
+      "page": 62,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".5 Matrices and Linear Algebra",
+      "page": 65,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".6 Diagonalizing the Permeability Tensor",
+      "page": 70,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".7 Rotational Transformation of a 2 \u00d7 2 Permeability Tensor",
+      "page": 77,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 82
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 83
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 84
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "Mathematics of Transient Analysis",
+      "page": 85,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".1 Introduction",
+      "page": 85,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".2 Bessel Functions",
+      "page": 90,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".3 Laplace Transformation",
+      "page": 94,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".4 Green\u2019s Functions and Source Functions",
+      "page": 108,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 176
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 179
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 180
+        }
+      ]
+    },
+    {
+      "num": "4",
+      "title": "Fluid Sampling",
+      "page": 181,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".1 Introduction",
+      "page": 181,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".2 General Guidelines for Setting Up a Sampling Program",
+      "page": 182,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".3 Reservoir-Fluid Type",
+      "page": 188,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".4 Well Conditioning",
+      "page": 189,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".5 Selection and Preparation of Sampling Equipment",
+      "page": 191,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".6 Pressurized Hydrocarbon Fluid-Sampling Procedures",
+      "page": 192,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".7 Nonpressurized Hydrocarbon Fluid-Sampling Procedures",
+      "page": 204,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".8 Oilfield Waters",
+      "page": 207,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".9 Sampling-Data Measurement and Recording",
+      "page": 210,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".10 Quality Control of Samples",
+      "page": 213,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".11 Hazards",
+      "page": 218,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".12 Special Topics in Fluid Sampling",
+      "page": 219,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".13 Conclusions",
+      "page": 221,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 222
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 222
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 223
+        }
+      ]
+    },
+    {
+      "num": "5",
+      "title": "Gas Properties",
+      "page": 225,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".1 Molecular Weight",
+      "page": 225,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".2 Ideal Gas",
+      "page": 225,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".3 Critical Temperature and Pressure",
+      "page": 226,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".4 Specific Gravity (Relative Density)",
+      "page": 227,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".5 Mole Fraction and Apparent Molecular Weight of Gas Mixtures",
+      "page": 228,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".6 Specific Gravity of Gas Mixtures",
+      "page": 228,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".7 Dalton\u2019s Law",
+      "page": 229,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".8 Amagat\u2019s Law",
+      "page": 229,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".9 Real Gases",
+      "page": 231,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".10 Real-Gas Law",
+      "page": 231,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".11 Gas Density and Formation Volume Factor",
+      "page": 241,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".12 Isothermal Compressibility of Gases",
+      "page": 241,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".13 Gas Viscosity",
+      "page": 244,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".14 Real-Gas Pseudopotential",
+      "page": 249,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".15 Vapor Pressure",
+      "page": 249,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".16 Further Example Problems",
+      "page": 252,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 261
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 263
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 264
+        }
+      ]
+    },
+    {
+      "num": "6",
+      "title": "Oil System Correlations",
+      "page": 265,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".1 Introduction",
+      "page": 265,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".2 Crude Oil Characterization",
+      "page": 267,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".3 Bubblepoint Pressure",
+      "page": 269,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".4 Nonhydrocarbon Gas Effects",
+      "page": 278,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".5 Solution GOR",
+      "page": 281,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".6 Formation Volume Factor",
+      "page": 281,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".7 Isothermal Compressibility",
+      "page": 283,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".8 Density",
+      "page": 285,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".9 Viscosity",
+      "page": 285,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".10 Surface Tension",
+      "page": 289,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".11 Water-Hydrocarbon Surface Tension",
+      "page": 296,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 312
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 314
+        },
+        {
+          "num": "",
+          "title": "Conversion Factors",
+          "page": 317
+        },
+        {
+          "num": "",
+          "title": "Appendix",
+          "page": 318
+        }
+      ]
+    },
+    {
+      "num": "7",
+      "title": "Thermodynamics and Phase Behavior",
+      "page": 341,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".1 Introduction",
+      "page": 341,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".2 Fundamental Ideas and Problem Statement",
+      "page": 341,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".3 Fundamental Equations",
+      "page": 345,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".4 Volumetric Properties of Pure Fluids",
+      "page": 358,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".5 Volumetric Properties of Mixtures",
+      "page": 372,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".6 Characterization of In-Situ Fluids",
+      "page": 374,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 375
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 376
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 377
+        }
+      ]
+    },
+    {
+      "num": "8",
+      "title": "Phase Diagrams",
+      "page": 379,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".1 Introduction",
+      "page": 379,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".2 Phase Diagrams for a Single Component",
+      "page": 379,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".3 The Phase Rule",
+      "page": 380,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".4 Binary Phase Diagrams",
+      "page": 381,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".5 Ternary Phase Diagrams",
+      "page": 384,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".6 Quaternary Phase Diagrams",
+      "page": 388,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".7 Reservoir Fluid Systems",
+      "page": 389,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".8 Phase Diagrams for EOR Processes",
+      "page": 392,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 402
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 403
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 404
+        }
+      ]
+    },
+    {
+      "num": "9",
+      "title": "Asphaltenes and Waxes",
+      "page": 405,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".1 Introduction",
+      "page": 405,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".2 Characteristics of Asphaltenes and Waxes",
+      "page": 408,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".3 Experimental Measurements of Asphaltene Precipitation",
+      "page": 416,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".4 Thermodynamic Models for Asphaltene Precipitation",
+      "page": 420,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".5 Asphaltene Deposition and Plugging",
+      "page": 430,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".6 Remedial Treatment for Asphaltene Precipitation",
+      "page": 437,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".7 Experimental Analysis of Wax Characteristics of Petroleum Fluids",
+      "page": 438,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".8 Thermodynamic Models for Wax Precipitation",
+      "page": 440,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".9 Wax-Deposition Models",
+      "page": 457,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".10 Prevention and Remediation of Wax Precipitation",
+      "page": 460,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 462
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 465
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 472
+        }
+      ]
+    },
+    {
+      "num": "10",
+      "title": "Properties of Produced Water",
+      "page": 473,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".1 History of Produced Water in Oil and Gas Fields",
+      "page": 473,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".2 Primary Production",
+      "page": 476,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".3 Economics of Produced Water",
+      "page": 477,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".4 Scale Deposition and Corrosion",
+      "page": 479,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".5 Drillstem or Downhole Water Sampling",
+      "page": 480,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".6 Compressibility",
+      "page": 486,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".7 Density",
+      "page": 487,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".8 Formation Volume Factor",
+      "page": 490,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".9 Resistivity",
+      "page": 492,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".10 Surface (Interfacial) Tension",
+      "page": 492,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".11 Viscosity",
+      "page": 492,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".12 The pH",
+      "page": 494,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".13 The Redox Potential",
+      "page": 497,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".14 Dissolved Gases",
+      "page": 498,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".15 Organic Constituents",
+      "page": 498,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".16 The Mixing-Line Technique",
+      "page": 500,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".17 Role of Suspended Solids in Produced Water",
+      "page": 502,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 502
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 503
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 505
+        }
+      ]
+    },
+    {
+      "num": "11",
+      "title": "Phase Behavior of H2O + Hydrocarbon Systems",
+      "page": 507,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".1 Introduction",
+      "page": 507,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".2 Phase Definitions and the Gibbs Phase Rule",
+      "page": 508,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".3 Equilibrium of H2O + Hydrocarbon Systems Without Hydrates",
+      "page": 509,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".4 Equilibrium of an H2O + Hydrocarbon System With Hydrates",
+      "page": 514,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".5 Conclusions",
+      "page": 535,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 537
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 538
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 539
+        }
+      ]
+    },
+    {
+      "num": "12",
+      "title": "Crude Oil Emulsions",
+      "page": 541,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".1 Introduction",
+      "page": 541,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".2 Stability of Emulsions",
+      "page": 548,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".3 Demulsification",
+      "page": 558,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".4 Special Topics in Crude Oil Emulsions",
+      "page": 568,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 574
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 575
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 575
+        },
+        {
+          "num": "",
+          "title": "Appendix A\u2014Emulsion Separation Index (ESI) Test",
+          "page": 577
+        }
+      ]
+    },
+    {
+      "num": "12",
+      "title": ".A1 Notes",
+      "page": 577,
+      "sections": [
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 578
+        }
+      ]
+    },
+    {
+      "num": "13",
+      "title": "Rock Properties",
+      "page": 579,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".1 Introduction",
+      "page": 579,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".2 Rocks: Minerals Plus Pores",
+      "page": 581,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".3 Density and Porosity",
+      "page": 585,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".4 Fluid Properties",
+      "page": 593,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".5 Elasticity, Stress-Strain, and Elastic Waves",
+      "page": 602,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".6 Rock Failure Relationships",
+      "page": 648,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".7 Gamma Ray Characteristics",
+      "page": 674,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 680
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 683
+        },
+        {
+          "num": "",
+          "title": "General References",
+          "page": 688
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 693
+        }
+      ]
+    },
+    {
+      "num": "14",
+      "title": "Single-Phase Permeability",
+      "page": 695,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".1 Introduction",
+      "page": 695,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".2 Petrologic Controls",
+      "page": 696,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".3 Corrections to Core Measurements",
+      "page": 704,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".4 Petrophysical Models",
+      "page": 709,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".5 Statistical Approaches and Reservoir Zonation",
+      "page": 726,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".6 Discussion",
+      "page": 728,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".7 Practical Applications",
+      "page": 730,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 731
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 732
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 734
+        }
+      ]
+    },
+    {
+      "num": "15",
+      "title": "Relative Permeability and Capillary Pressure",
+      "page": 735,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".1 Introduction",
+      "page": 735,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".2 Observations of Capillary Pressure Relationships",
+      "page": 736,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".3 Capillary Pressure Models",
+      "page": 742,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".4 Observations of Relative Permeability Relationships",
+      "page": 744,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".5 Relative Permeability Models",
+      "page": 754,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".6 Measurement of Rock/Fluid Relationships",
+      "page": 760,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".7 Trends and Cautions in Rock/Fluid Properties",
+      "page": 767,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 768
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 770
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 773
+        }
+      ]
+    },
+    {
+      "num": "16",
+      "title": "Petroleum Economics",
+      "page": 775,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".1 Introduction",
+      "page": 775,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".2 Economic Model for Oil and Gas Property Evaluation",
+      "page": 776,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".3 Time Value of Money",
+      "page": 783,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".4 Key Economic Parameters",
+      "page": 787,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".5 Recommended Practices for Economic Calculations",
+      "page": 790,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".6 Risk Analysis for Oil and Gas Property Evaluation",
+      "page": 791,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".7 The Next Frontier",
+      "page": 800,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 812
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 813
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 815
+        }
+      ]
+    },
+    {
+      "num": "17",
+      "title": "International Oil and Gas Law",
+      "page": 817,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".1 Introduction",
+      "page": 817,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".2 History of International Oil and Gas Development",
+      "page": 817,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".3 Interests in Petroleum Properties",
+      "page": 819,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".4 Considerations in Conducting Operations in International Projects",
+      "page": 822,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".5 Joint Operating Agreement",
+      "page": 827,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".6 Marketing Arrangements",
+      "page": 828,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".7 Abandonment",
+      "page": 830,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".8 Dispute Resolution",
+      "page": 831,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".9 International Law and Legal Systems",
+      "page": 835,
+      "sections": [
+        {
+          "num": "",
+          "title": "References",
+          "page": 837
+        }
+      ]
+    },
+    {
+      "num": "18",
+      "title": "The 21st Century Energy Mix",
+      "page": 839,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".1 Introduction",
+      "page": 839,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".2 Energy Options",
+      "page": 839,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".3 Energy Forecast",
+      "page": 842,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".4 Changing Industry Policy",
+      "page": 845,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".5 Ethical Issues in Energy Distribution",
+      "page": 846,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".6 Implications for Engineers",
+      "page": 846,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".7 Conclusions",
+      "page": 847,
+      "sections": [
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 847
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 847
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 848
+        }
+      ]
+    }
+  ]
+}

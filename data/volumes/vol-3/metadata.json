@@ -1,0 +1,978 @@
+{
+  "vol_id": "vol-3",
+  "title": "Volume 3: Facilities and Construction Engineering",
+  "filename": "Vol 3.pdf",
+  "page_count": 613,
+  "total_words": 217808,
+  "ocr_pages_count": 14,
+  "toc": [
+    {
+      "num": "1",
+      "title": "Oil and Gas Processing",
+      "page": 9,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".1 Starting From the Wells",
+      "page": 9,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".2 Definition of Terms",
+      "page": 10,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".3 Function of a Facility",
+      "page": 10,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".4 Example Oil Facility",
+      "page": 11,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".5 Gas Facility",
+      "page": 14,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".6 Process Control",
+      "page": 17,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".7 Design Safety",
+      "page": 17,
+      "sections": [
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 19
+        }
+      ]
+    },
+    {
+      "num": "2",
+      "title": "Oil and Gas Separators",
+      "page": 21,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".1 Introduction",
+      "page": 21,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".2 Examples of Separators",
+      "page": 44,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".3 Separator Sizing",
+      "page": 47,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".4 Examples of Separator Sizing",
+      "page": 57,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 64
+        },
+        {
+          "num": "",
+          "title": "Appendix A\u2014Drag Coefficients",
+          "page": 65
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 67
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "Emulsion Treating",
+      "page": 69,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".1 Introduction",
+      "page": 69,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".2 Emulsions",
+      "page": 70,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".3 Emulsion-Treating Methods",
+      "page": 73,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".4 Desalting",
+      "page": 86,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".5 Emulsion-Treating Equipment",
+      "page": 90,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".6 Subsystems",
+      "page": 113,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".7 Operational Considerations",
+      "page": 120,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".8 Economics of Treating Crude-Oil Emulsions",
+      "page": 123,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 125
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 129
+        }
+      ]
+    },
+    {
+      "num": "4",
+      "title": "Water-Treating Facilities in Oil and Gas Operations",
+      "page": 131,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".1 Introduction",
+      "page": 131,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".2 Produced-Water Discharge or (Steam) Injection",
+      "page": 132,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".3 Surface-Water Treatment for Injection",
+      "page": 167,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".4 Water-Treating Chemicals",
+      "page": 178,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".5 Material Selection for Water-Treating Equipment",
+      "page": 185,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 188
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 191
+        }
+      ]
+    },
+    {
+      "num": "5",
+      "title": "Gas Treating and Processing",
+      "page": 193,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".1 Objectives of Gas Treating and Processing",
+      "page": 193,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".2 Typical Sales-Gas Specifications",
+      "page": 193,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".3 Sour Gas Sweetening",
+      "page": 195,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".4 Physical Solvents",
+      "page": 202,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".5 Hybrid Process",
+      "page": 202,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".6 Reduction/Oxidation (Redox) Process",
+      "page": 203,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".7 Nonregenerative Chemical Solvent (Scavenger) Processes",
+      "page": 204,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".8 Dry Sweetening Processes",
+      "page": 205,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".9 Screening Program for Optimum Process Selection",
+      "page": 206,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".10 Dehydration of Natural Gas",
+      "page": 206,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".11 Dehydration With Glycol",
+      "page": 206,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".12 Process Description",
+      "page": 208,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".13 Function of the Inlet Separator",
+      "page": 208,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".14 Function of the Contactor or Absorber",
+      "page": 210,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".15 Function of the Reboiler",
+      "page": 211,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".16 Water Dewpoint Depression",
+      "page": 212,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".17 Glycol Regeneration",
+      "page": 214,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".18 Glycol Purity Enhancement Methods",
+      "page": 214,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".19 Components of the Glycol Circulating System",
+      "page": 215,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".20 Instrumentation and Controls",
+      "page": 217,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".21 Contactor Design Considerations",
+      "page": 219,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".22 Water Dewpoint Determination",
+      "page": 220,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".23 Normal Operation Checklist",
+      "page": 220,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".24 Trouble Diagnosis",
+      "page": 220,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".25 Environmental Concerns",
+      "page": 221,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".26 Glycol Dehydrator BTEX and VOC Emission Control",
+      "page": 221,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".27 Dry Desiccant Dehydration",
+      "page": 222,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".28 Typical Process Equipment",
+      "page": 223,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".29 Dehydration With Deliquescing Desiccants",
+      "page": 223,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".30 Water Dewpoint and Hydrocarbon Dewpoint Control",
+      "page": 226,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".31 Dewpoint Control by Refrigeration",
+      "page": 227,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".32 The IFPEXOL Process",
+      "page": 229,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".33 NGL Extraction Methods",
+      "page": 230,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".34 The Turbo-Expander Process",
+      "page": 231,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".35 Joule-Thomson Expansion",
+      "page": 232,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".36 Membrane Processing for CO2 Removal",
+      "page": 233,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 235
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 237
+        }
+      ]
+    },
+    {
+      "num": "6",
+      "title": "Pumps",
+      "page": 239,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".1 Fluid Principles and Hydraulics",
+      "page": 239,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".2 Hydraulic Principles",
+      "page": 241,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".3 Centrifugal Pumps",
+      "page": 248,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".4 Positive-Displacement Pumps",
+      "page": 258,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".5 Pump Drivers",
+      "page": 265,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 266
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 267
+        }
+      ]
+    },
+    {
+      "num": "7",
+      "title": "Compressors",
+      "page": 269,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".1 Introduction",
+      "page": 269,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".2 Classification and Types",
+      "page": 270,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".3 Compression Theory",
+      "page": 273,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".4 Centrifugal Compressors",
+      "page": 280,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".5 Reciprocating Compressors",
+      "page": 290,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".6 Summary",
+      "page": 306,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 306
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 308
+        }
+      ]
+    },
+    {
+      "num": "8",
+      "title": "Prime Movers",
+      "page": 309,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".1 Introduction",
+      "page": 309,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".2 Reciprocating Engines",
+      "page": 309,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".3 Gas Turbine Engines",
+      "page": 316,
+      "sections": [
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 324
+        }
+      ]
+    },
+    {
+      "num": "9",
+      "title": "Piping and Pipelines",
+      "page": 325,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".1 Introduction",
+      "page": 325,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".2 Piping and Pipeline Systems\u2019 Pressure-Drop Formulas",
+      "page": 326,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".3 Pressure Drop Caused by Valves and Fittings",
+      "page": 343,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".4 Selecting Pipe Wall Thickness",
+      "page": 349,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".5 Velocity Considerations",
+      "page": 361,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".6 Valve, Fitting, and Flange Pressure Ratings",
+      "page": 363,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".7 Specification Pressure Breaks",
+      "page": 369,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".8 Pipe Expansion and Supports",
+      "page": 370,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".9 Pipelines",
+      "page": 372,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".10 Pipeline Pigging",
+      "page": 388,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".11 Hydrostatic Testing and Nondestructive Testing and Inspection",
+      "page": 395,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".12 Instrumentation and Control",
+      "page": 397,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 398
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 401
+        }
+      ]
+    },
+    {
+      "num": "10",
+      "title": "Safety Systems",
+      "page": 403,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".1 Basic Safety Concepts",
+      "page": 403,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".2 API RP 14C",
+      "page": 406,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".3 Relief Valves and Relief Systems",
+      "page": 416,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".4 Flare and Vent Disposal Systems",
+      "page": 432,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 444
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 446
+        }
+      ]
+    },
+    {
+      "num": "11",
+      "title": "Liquid and Gas Measurement",
+      "page": 447,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": "A Liquid Meters\u2014Marsha Yon",
+      "page": 447,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": "B Gas Meters\u2014Kevin L. Warner and Tom Mooney",
+      "page": 457,
+      "sections": [
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 468
+        }
+      ]
+    },
+    {
+      "num": "12",
+      "title": "Electrical Systems",
+      "page": 469,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".1 Introduction",
+      "page": 469,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".2 Electrical Codes and Standards",
+      "page": 469,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".3 Power Sources",
+      "page": 469,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".4 Sizing and Selection of the Power Supply",
+      "page": 471,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".5 Electrical-Distribution Systems",
+      "page": 473,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".6 Electrical Grounding",
+      "page": 477,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".7 Voltage Drop in Electrical Systems",
+      "page": 479,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".8 Power Factor and Use of Capacitors",
+      "page": 481,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".9 Hazardous-Area Classification",
+      "page": 483,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".10 Alternating-Current (AC) Motors",
+      "page": 487,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".11 Motor Specifications",
+      "page": 493,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".12 NEMA Motor Characteristics",
+      "page": 497,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".13 Methods of Motor Starting",
+      "page": 498,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".14 Derating Factors",
+      "page": 500,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".15 AC Motor Drives",
+      "page": 501,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".16 Matching AC Motors to Load",
+      "page": 504,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".17 Enclosures",
+      "page": 506,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".18 Mounting",
+      "page": 508,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".19 Above-NEMA Motors",
+      "page": 508,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 509
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 512
+        }
+      ]
+    },
+    {
+      "num": "13",
+      "title": "Oil Storage",
+      "page": 513,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".1 Storage Tanks",
+      "page": 513,
+      "sections": [
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 531
+        }
+      ]
+    },
+    {
+      "num": "14",
+      "title": "Offshore and Subsea Facilities",
+      "page": 533,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".1 Introduction",
+      "page": 533,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".2 Historical Review",
+      "page": 533,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".3 Fixed Steel and Concrete Gravity Base Structures",
+      "page": 542,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".4 Compliant and Floating Systems",
+      "page": 552,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".5 Subsea Systems",
+      "page": 559,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".6 Flow Assurance",
+      "page": 562,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".7 Offshore Production Operations",
+      "page": 563,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".8 Arctic",
+      "page": 566,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".9 Future Technology Requirements",
+      "page": 570,
+      "sections": [
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 572
+        }
+      ]
+    },
+    {
+      "num": "15",
+      "title": "Project Management of Surface Facilities",
+      "page": 573,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".1 Introduction",
+      "page": 573,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".2 Definitions",
+      "page": 573,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".3 Project Execution",
+      "page": 577,
+      "sections": []
+    }
+  ]
+}

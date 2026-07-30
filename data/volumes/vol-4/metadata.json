@@ -1,0 +1,1411 @@
+{
+  "vol_id": "vol-4",
+  "title": "Volume 4: Production Operations Engineering",
+  "filename": "Vol 4.pdf",
+  "page_count": 908,
+  "total_words": 389631,
+  "ocr_pages_count": 0,
+  "toc": [
+    {
+      "num": "1",
+      "title": "Inflow and Outflow Performance",
+      "page": 9,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".1 The Production System",
+      "page": 9,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".2 Reservoir Inflow Performance",
+      "page": 10,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".3 Wellbore Flow Performance",
+      "page": 31,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".4 Flow Through Chokes",
+      "page": 34,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".5 Systems Analysis",
+      "page": 36,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".6 Summary",
+      "page": 43,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 44
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 47
+        }
+      ]
+    },
+    {
+      "num": "2",
+      "title": "Completion Systems",
+      "page": 49,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".1 Introduction",
+      "page": 49,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".2 Packers",
+      "page": 49,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".3 Methods of Conveyance",
+      "page": 62,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".4 Metallurgy",
+      "page": 66,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".5 Elastomers",
+      "page": 67,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".6 ISO and API Standards",
+      "page": 69,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".7 Packer Rating Envelopes",
+      "page": 70,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".8 Flow-Control Accessories",
+      "page": 71,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".9 Subsurface Safety Systems",
+      "page": 76,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".10 Cased-Hole Applications",
+      "page": 80,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".11 Multilateral Completions",
+      "page": 87,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".12 Operational Well Modes",
+      "page": 93,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".13 Impact of Length and Force Changes to the Tubing String",
+      "page": 98,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".14 Combination Tubing/Packer Systems",
+      "page": 106,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 108
+        },
+        {
+          "num": "",
+          "title": "Glossary",
+          "page": 110
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 111
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "Tubing Selection, Design, and Installation",
+      "page": 113,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".1 Introduction",
+      "page": 113,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".2 Oilfield Tubing",
+      "page": 114,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".3 API/ISO Tubing Requirements",
+      "page": 114,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".4 Tubing Design Factors",
+      "page": 123,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".5 Tubing Inspection",
+      "page": 143,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".6 Tubing Handling",
+      "page": 144,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".7 Coiled Tubing",
+      "page": 149,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 153
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 156
+        }
+      ]
+    },
+    {
+      "num": "4",
+      "title": "Perforating",
+      "page": 157,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".1 Flow Path",
+      "page": 157,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".2 Definitions",
+      "page": 157,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".3 Perforating History",
+      "page": 159,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".4 Perforating Methods",
+      "page": 159,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".5 Basic Perforating Design\u2014Variables of Flow Through a Perforation",
+      "page": 163,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".6 Temperature Effect",
+      "page": 164,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".7 Basic Perforating Design\u2014What Is Necessary for the Optimum Flow Path",
+      "page": 165,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".8 Improving Flow Capacity",
+      "page": 168,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".9 Cement and Casing Damage",
+      "page": 170,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".10 Perforating Multiple Strings and Thick Cement",
+      "page": 171,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".11 Perforating for Different Stimulations",
+      "page": 171,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".12 Perforating in Highly Deviated Wells",
+      "page": 171,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".13 Perforating Equipment",
+      "page": 172,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".14 Limited Penetration Charges",
+      "page": 177,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".15 Pipe Cutoff Methods",
+      "page": 177,
+      "sections": [
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 181
+        }
+      ]
+    },
+    {
+      "num": "5",
+      "title": "Sand Control",
+      "page": 183,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".1 Causes of Sand Production",
+      "page": 183,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".2 Consequences of Sand Production",
+      "page": 184,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".3 Predicting Sand Production",
+      "page": 186,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".4 Sand-Control Techniques",
+      "page": 188,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".5 Gravel-Pack Design",
+      "page": 194,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".6 Slotted Liners and Wire-Wrapped Screens",
+      "page": 199,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".7 Gravel-Pack Completion Equipment and Service Tools",
+      "page": 206,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".8 Well Preparation for Gravel Packing",
+      "page": 211,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".9 Gravel Placement Techniques",
+      "page": 220,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".10 Prepacking the Perforations",
+      "page": 229,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".11 Openhole Gravel Packing",
+      "page": 237,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".12 Sand Control in Horizontal and Long-Throw Highly-Deviated Wells",
+      "page": 240,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 246
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 247
+        }
+      ]
+    },
+    {
+      "num": "6",
+      "title": "Formation Damage",
+      "page": 249,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".1 Introduction",
+      "page": 249,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".2 Quantifying Formation Damage",
+      "page": 249,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".3 Determination of Flow Efficiency and Skin",
+      "page": 251,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".4 Formation Damage vs. Pseudodamage",
+      "page": 254,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".5 Drilling-Induced Formation Damage",
+      "page": 255,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".6 Formation Damage Caused by Completion and Workover Fluids",
+      "page": 259,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".7 Damage During Perforating and Cementing",
+      "page": 260,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".8 Formation Damage Caused by Fines Migration",
+      "page": 262,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".9 Formation Damage Caused by Swelling Clays",
+      "page": 264,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".10 Formation Damage in Injection Wells",
+      "page": 265,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".11 Formation Damage Resulting From Paraffins and Asphaltenes",
+      "page": 267,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".12 Formation Damage Resulting From Emulsion and Sludge Formation",
+      "page": 270,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".13 Formation Damage Resulting From Condensate Banking",
+      "page": 271,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".14 Formation Damage Resulting From Gas Breakout",
+      "page": 273,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".15 Formation Damage Resulting From Water Blocks",
+      "page": 274,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".16 Formation Damage Resulting From Wettability Alteration",
+      "page": 274,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".17 Bacterial Plugging",
+      "page": 274,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".18 Conclusions",
+      "page": 275,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 275
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 282
+        }
+      ]
+    },
+    {
+      "num": "7",
+      "title": "Matrix Acidizing",
+      "page": 283,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".1 Introduction",
+      "page": 283,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".2 Two Basic Acidizing Treatments",
+      "page": 283,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".3 Purposes/Applications",
+      "page": 284,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".4 Effects of Acidizing: Undamaged Well",
+      "page": 284,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".5 Selecting Successful Acidizing Candidates",
+      "page": 287,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".6 Production History Plots",
+      "page": 287,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".7 Offset Well Comparison",
+      "page": 288,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".8 Pressure Buildup Tests",
+      "page": 288,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".9 Well Flow Analysis",
+      "page": 290,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".10 Formation Damage Diagnosis",
+      "page": 291,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".11 Identify Extent/Type of Damage",
+      "page": 291,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".12 Damage Removal by Chemical Solvents",
+      "page": 292,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".13 Formation Response to Acid",
+      "page": 292,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".14 Formation Properties",
+      "page": 292,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".15 Formation Matrix Properties",
+      "page": 295,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".16 Formation Mineralogy",
+      "page": 296,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".17 Methods of Controlling Precipitates",
+      "page": 298,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".18 Acid Treatment Design",
+      "page": 300,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".19 Matrix Acidizing Design Guidelines",
+      "page": 300,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".20 Acid Type and Concentration",
+      "page": 300,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".21 Retarded HF Acids",
+      "page": 302,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".22 Geochemical Models",
+      "page": 302,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".23 Acid Placement and Coverage",
+      "page": 303,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".24 Mechanical Techniques",
+      "page": 303,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".25 Particulates",
+      "page": 304,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".26 Viscous Acid",
+      "page": 305,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".27 Advances in Acid Diversion",
+      "page": 307,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".28 Horizontal Wells",
+      "page": 307,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".29 Acid Additives",
+      "page": 308,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".30 Job Supervision",
+      "page": 312,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".31 Safety and Environment Protection",
+      "page": 312,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".32 Well Preparation",
+      "page": 313,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".33 Quality Control",
+      "page": 314,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".34 Injection-Rate Control and Monitoring",
+      "page": 315,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".35 Pressure Behavior During Acid Injection",
+      "page": 316,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".36 On-Site Evaluation of Acid Treatment Effectiveness",
+      "page": 316,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".37 Spent Acid Production Control",
+      "page": 317,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".38 Produced Fluid Sampling",
+      "page": 318,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".39 Evaluation of Acid Treatments",
+      "page": 320,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".40 Continuous Improvement",
+      "page": 323,
+      "sections": [
+        {
+          "num": "",
+          "title": "Summary",
+          "page": 324
+        },
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 324
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 329
+        }
+      ]
+    },
+    {
+      "num": "8",
+      "title": "Hydraulic Fracturing",
+      "page": 331,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".1 Introduction",
+      "page": 331,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".2 Fracture Mechanics",
+      "page": 335,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".3 Fracture Propagation Models",
+      "page": 341,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".4 Fracturing Fluids and Additives",
+      "page": 344,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".5 Propping Agents and Fracture Conductivity",
+      "page": 347,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".6 Fracture Treatment Design",
+      "page": 352,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".7 Acid Fracturing",
+      "page": 356,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".8 Fracturing High-Permeability Formations",
+      "page": 360,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".9 Fracture Diagnostics",
+      "page": 363,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".10 Post-Fracture Well Behavior",
+      "page": 366,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 371
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 374
+        }
+      ]
+    },
+    {
+      "num": "9",
+      "title": "Well Production Problems",
+      "page": 375,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".1 Introduction",
+      "page": 375,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".2 Water-Related Production Problems",
+      "page": 385,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 412
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 412
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 417
+        }
+      ]
+    },
+    {
+      "num": "10",
+      "title": "Artificial Lift Selection",
+      "page": 419,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".1 Introduction",
+      "page": 419,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".2 Reservoir Pressure and Well Productivity",
+      "page": 420,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".3 Reservoir Fluids",
+      "page": 421,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".4 Long-Term Reservoir Performance and Facility Constraints",
+      "page": 422,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".5 Types of Artificial Lift",
+      "page": 422,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".6 Selection Methods",
+      "page": 446,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".7 Sample Run-Life Information",
+      "page": 456,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".8 Conclusions",
+      "page": 457,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 459
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 463
+        }
+      ]
+    },
+    {
+      "num": "11",
+      "title": "Sucker-Rod Lift",
+      "page": 465,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".1 Introduction",
+      "page": 465,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".2 The Producing Reservoir",
+      "page": 467,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".3 Downhole Sucker-Rod Pumps",
+      "page": 473,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".4 Sucker Rods",
+      "page": 481,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".5 Miscellaneous Subsurface Equipment",
+      "page": 489,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".6 Sucker-Rod Pumping Units",
+      "page": 496,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".7 Prime Movers",
+      "page": 501,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".8 Miscellaneous Surface Equipment",
+      "page": 513,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".9 Design Calculations",
+      "page": 515,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".10 Automation and Pumping Control",
+      "page": 516,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".11 Troubleshooting Sucker-Rod-Lift Installations",
+      "page": 517,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 518
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 527
+        }
+      ]
+    },
+    {
+      "num": "12",
+      "title": "Gas Lift",
+      "page": 529,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".1 Introduction",
+      "page": 529,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".2 Designing a Gas Lift System",
+      "page": 531,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".3 Compressor Horsepower",
+      "page": 535,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".4 Gas Fundamentals",
+      "page": 541,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".5 Gas Lift Equipment",
+      "page": 550,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".6 Gas Lift Valve Mechanics",
+      "page": 552,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".7 Production-Pressure Factor and Valve Spread",
+      "page": 563,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".8 Dynamic Gas Lift Valve Performance",
+      "page": 564,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".9 Design of Gas Lift Installations",
+      "page": 566,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".10 Installation Design Methods",
+      "page": 568,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".11 Intermittent-Flow Gas Lift",
+      "page": 601,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".12 Operation of Gas Lift Installations",
+      "page": 620,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".13 Gas Lift for Unusual Environments",
+      "page": 623,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 625
+        },
+        {
+          "num": "",
+          "title": "Appendix A\u2014Simplified Mathematical Gas Lift Valve Performance Model",
+          "page": 631
+        },
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 632
+        }
+      ]
+    },
+    {
+      "num": "13",
+      "title": "Electrical Submersible Pumps",
+      "page": 633,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".1 Introduction",
+      "page": 633,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".2 History1,2",
+      "page": 633,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".3 ESP System",
+      "page": 634,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".4 ESP System Selection and Performance Calculations",
+      "page": 695,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".5 Design Example",
+      "page": 702,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".6 Example",
+      "page": 710,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 716
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 719
+        }
+      ]
+    },
+    {
+      "num": "14",
+      "title": "Hydraulic Pumping in Oil Wells",
+      "page": 721,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".1 Introduction",
+      "page": 721,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".2 Downhole Pumps",
+      "page": 722,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".3 Principles of Operation",
+      "page": 726,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".4 Downhole Pump Accessories",
+      "page": 742,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".5 Surface Equipment",
+      "page": 746,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 763
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 763
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 764
+        }
+      ]
+    },
+    {
+      "num": "15",
+      "title": "Progressing Cavity Pumping Systems",
+      "page": 765,
+      "sections": [
+        {
+          "num": "",
+          "title": "Introduction",
+          "page": 765
+        }
+      ]
+    },
+    {
+      "num": "15",
+      "title": ".1 PCP Lift System Equipment",
+      "page": 767,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".2 PCP System Design",
+      "page": 793,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".3 Specific Application Considerations",
+      "page": 816,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".4 PCP System Installation, Automation, Troubleshooting, and Failure Diagnosis",
+      "page": 830,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".5 Design Example",
+      "page": 838,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 842
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 845
+        }
+      ]
+    },
+    {
+      "num": "16",
+      "title": "Plunger Lift",
+      "page": 847,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".1 Introduction",
+      "page": 847,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".2 Basics/Operation",
+      "page": 849,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".3 Applications",
+      "page": 854,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".4 Design and Models",
+      "page": 858,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".5 Basic Foss and Gaul16 Equations (Modified by Mower et al.13 and Lea18)",
+      "page": 862,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".6 Equipment Installation and Maintenance",
+      "page": 867,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".7 Evaluation and Installation of Downhole Plunger Equipment",
+      "page": 872,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".8 Evaluation and Installation of Wellhead and Plunger Surface Equipment",
+      "page": 874,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".9 Design Considerations and Plunger Selection",
+      "page": 876,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".10 Evaluation of Control Methods",
+      "page": 881,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".11 Evaluation and Modification of Production Facilities",
+      "page": 890,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 891
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 892
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 894
+        }
+      ]
+    }
+  ]
+}

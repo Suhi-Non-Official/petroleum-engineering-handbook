@@ -1,0 +1,20 @@
+# Node dependencies
+frontend/node_modules/
+frontend/dist/
+
+# Python cache & virtualenvs
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# Large pre-rendered preview images (generated automatically)
+data/previews/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Optional: Large PDF files (uncomment if making repository public)
+# *.pdf
