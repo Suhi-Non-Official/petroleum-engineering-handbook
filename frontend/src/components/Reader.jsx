@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Columns, Image as ImageIcon } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Columns, FileText, Image as ImageIcon } from 'lucide-react';
 
 export default function Reader({
   volId,
@@ -11,7 +11,7 @@ export default function Reader({
   searchQuery
 }) {
   const [zoom, setZoom] = useState(100);
-  const [viewMode, setViewMode] = useState('canvas'); // Default to High-Resolution Image View
+  const [viewMode, setViewMode] = useState('text'); // User can toggle between 'canvas' (Image) and 'text' (Text-Only)
   const [imgError, setImgError] = useState(false);
 
   const handlePrev = () => {
@@ -77,6 +77,39 @@ export default function Reader({
         </div>
 
         <div className="toolbar-group">
+          {/* Explicit View Mode Toggle Buttons */}
+          <button
+            className={`btn-accent ${viewMode === 'text' ? '' : 'btn-icon'}`}
+            style={{
+              padding: '0.3rem 0.6rem',
+              fontSize: '0.8rem',
+              background: viewMode === 'text' ? 'var(--accent-amber)' : 'var(--bg-primary)',
+              color: viewMode === 'text' ? '#000' : 'var(--text-primary)'
+            }}
+            onClick={() => {
+              setViewMode('text');
+              setImgError(false);
+            }}
+          >
+            <FileText size={15} /> 📄 Text-Only
+          </button>
+
+          <button
+            className={`btn-accent ${viewMode === 'canvas' ? '' : 'btn-icon'}`}
+            style={{
+              padding: '0.3rem 0.6rem',
+              fontSize: '0.8rem',
+              background: viewMode === 'canvas' ? 'var(--accent-blue)' : 'var(--bg-primary)',
+              color: viewMode === 'canvas' ? '#fff' : 'var(--text-primary)'
+            }}
+            onClick={() => {
+              setViewMode('canvas');
+              setImgError(false);
+            }}
+          >
+            <ImageIcon size={15} /> 📷 Image View
+          </button>
+
           <button className="btn-icon" onClick={handleZoomOut} title="Zoom Out">
             <ZoomOut size={16} />
           </button>
@@ -85,17 +118,6 @@ export default function Reader({
           </span>
           <button className="btn-icon" onClick={handleZoomIn} title="Zoom In">
             <ZoomIn size={16} />
-          </button>
-
-          <button
-            className={`btn-icon ${viewMode === 'canvas' && !imgError ? 'active' : ''}`}
-            onClick={() => {
-              setImgError(false);
-              setViewMode(viewMode === 'canvas' ? 'text' : 'canvas');
-            }}
-            title="Toggle View Mode (High-Res Image / Text)"
-          >
-            <ImageIcon size={16} />
           </button>
 
           <button className="btn-icon" onClick={onOpenSplitView} title="Toggle Split View Mode">
@@ -122,7 +144,7 @@ export default function Reader({
 
           {viewMode === 'canvas' && !imgError ? (
             <div>
-              <div style={{ background: 'rgba(245, 158, 11, 0.15)', color: 'var(--accent-amber)', padding: '0.4rem 0.75rem', borderRadius: '4px', fontSize: '0.75rem', marginBottom: '1rem', fontWeight: 600 }}>
+              <div style={{ background: 'rgba(56, 189, 248, 0.15)', color: 'var(--accent-blue)', padding: '0.4rem 0.75rem', borderRadius: '4px', fontSize: '0.75rem', marginBottom: '1rem', fontWeight: 600 }}>
                 High-Resolution Original PDF Image View Active
               </div>
               <img
@@ -139,12 +161,12 @@ export default function Reader({
               />
             </div>
           ) : (
-            <div className="page-text-content">
+            <div className="page-text-content" style={{ padding: '0.5rem 0' }}>
               {pageData?.text_content ? (
                 highlightedText(pageData.text_content)
               ) : (
                 <div style={{ textAlign: 'center', padding: '3rem', color: '#64748b' }}>
-                  Loading page content...
+                  Loading page text content...
                 </div>
               )}
             </div>

@@ -16,13 +16,9 @@ os.makedirs(docs_dir, exist_ok=True)
 # 1. Copy global collection.json
 src_coll = os.path.join(data_dir, "global", "collection.json")
 dst_public_coll = os.path.join(public_dir, "global", "collection.json")
-dst_docs_coll = os.path.join(docs_dir, "global", "collection.json")
 
 os.makedirs(os.path.dirname(dst_public_coll), exist_ok=True)
-os.makedirs(os.path.dirname(dst_docs_coll), exist_ok=True)
-
 shutil.copy(src_coll, dst_public_coll)
-shutil.copy(src_coll, dst_docs_coll)
 
 # 2. Extract full page text and metadata from SQLite database for all 7 volumes
 conn = sqlite3.connect(db_path)
@@ -40,20 +36,16 @@ pdf_map = {
 }
 
 for vol_id, pdf_name in pdf_map.items():
-    print(f"Bundling full text and page data for {vol_id}...")
+    print(f"Bundling full text and page data for {vol_id} into public/data...")
     
     vol_src_dir = os.path.join(data_dir, "volumes", vol_id)
     vol_pub_dir = os.path.join(public_dir, "volumes", vol_id)
-    vol_doc_dir = os.path.join(docs_dir, "volumes", vol_id)
-    
     os.makedirs(vol_pub_dir, exist_ok=True)
-    os.makedirs(vol_doc_dir, exist_ok=True)
 
     # Copy metadata.json
     meta_src = os.path.join(vol_src_dir, "metadata.json")
     if os.path.exists(meta_src):
         shutil.copy(meta_src, os.path.join(vol_pub_dir, "metadata.json"))
-        shutil.copy(meta_src, os.path.join(vol_doc_dir, "metadata.json"))
 
     # Fetch all pages with text_content from DB
     cursor.execute("""
@@ -80,19 +72,13 @@ for vol_id, pdf_name in pdf_map.items():
             "text_content": r["text_content"]
         })
 
-    # Write enriched pages.json with full text_content into data/volumes/vol-X/pages.json
-    with open(os.path.join(vol_src_dir, "pages.json"), "w", encoding="utf-8") as f:
-        json.dump(vol_pages, f, indent=2)
+    # Write enriched pages.json into frontend/public/data/volumes/vol-X/pages.json
     with open(os.path.join(vol_pub_dir, "pages.json"), "w", encoding="utf-8") as f:
         json.dump(vol_pages, f, indent=2)
-    with open(os.path.join(vol_doc_dir, "pages.json"), "w", encoding="utf-8") as f:
-        json.dump(vol_pages, f, indent=2)
 
-    # Pre-render page previews
+    # Pre-render page previews into public/data/previews/vol-X/
     prev_pub_dir = os.path.join(public_dir, "previews", vol_id)
-    prev_doc_dir = os.path.join(docs_dir, "previews", vol_id)
     os.makedirs(prev_pub_dir, exist_ok=True)
-    os.makedirs(prev_doc_dir, exist_ok=True)
     
     pdf_path = os.path.join(base_dir, pdf_name)
     if os.path.exists(pdf_path):
@@ -110,18 +96,15 @@ for vol_id, pdf_name in pdf_map.items():
             if 1 <= pno <= len(doc):
                 img_name = f"page_{pno}.jpg"
                 pub_img = os.path.join(prev_pub_dir, img_name)
-                doc_img = os.path.join(prev_doc_dir, img_name)
-                if not os.path.exists(pub_img) or not os.path.exists(doc_img):
+                if not os.path.exists(pub_img):
                     try:
                         page = doc[pno - 1]
                         pix = page.get_pixmap(dpi=100)
                         os.makedirs(os.path.dirname(pub_img), exist_ok=True)
-                        os.makedirs(os.path.dirname(doc_img), exist_ok=True)
                         pix.save(pub_img)
-                        pix.save(doc_img)
                     except Exception as e:
                         pass
         doc.close()
 
 conn.close()
-print("All 5,626 pages full text and static assets successfully bundled!")
+print("All 5,626 pages full text successfully bundled into public/data!")
