@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Wrench, Calculator, ArrowRightLeft } from 'lucide-react';
 
 const UNITS_MAP = {
@@ -37,10 +37,22 @@ export default function ToolsPanel({ isOpen, onClose }) {
   const [hydroParams, setHydroParams] = useState({ mud_weight_ppg: 10.5, tvd_ft: 12000 });
   const [hydroResult, setHydroResult] = useState(null);
 
+  // Auto-calculate outputs on load and input change
+  useEffect(() => {
+    handleConvert();
+  }, [category, fromUnit, toUnit, valInput]);
+
+  useEffect(() => {
+    handleCalcDarcy();
+  }, [darcyParams]);
+
+  useEffect(() => {
+    handleCalcHydro();
+  }, [hydroParams]);
+
   if (!isOpen) return null;
 
-  // Pure Client-Side Unit Conversion (Works 100% on GitHub Pages!)
-  const handleConvert = () => {
+  function handleConvert() {
     const val = parseFloat(valInput) || 0;
     if (category === 'temperature') {
       let res = val;
@@ -67,41 +79,42 @@ export default function ToolsPanel({ isOpen, onClose }) {
         formula: `${val} ${fromUnit} * (${cat[fromUnit]} / ${cat[toUnit]}) = ${Math.round(converted * 10000) / 10000} ${toUnit}`
       });
     }
-  };
+  }
 
-  // Pure Client-Side Darcy Radial Flow Calculator
-  const handleCalcDarcy = () => {
+  function handleCalcDarcy() {
     const { k_md, h_ft, p_diff_psi, mu_cp, b_vol, r_w_ft, r_e_ft } = darcyParams;
-    const ln_ratio = Math.log(r_e_ft / r_w_ft);
-    const numerator = 0.00708 * k_md * h_ft * p_diff_psi;
-    const denominator = mu_cp * b_vol * ln_ratio;
-    const q = numerator / denominator;
+    const rw = r_w_ft > 0 ? r_w_ft : 0.33;
+    const re = r_e_ft > rw ? r_e_ft : 660;
+    const ln_ratio = Math.log(re / rw);
+    const numerator = 0.00708 * (k_md || 0) * (h_ft || 0) * (p_diff_psi || 0);
+    const denominator = (mu_cp || 1) * (b_vol || 1) * ln_ratio;
+    const q = denominator > 0 ? numerator / denominator : 0;
 
     setDarcyResult({
       flow_rate_stbd: Math.round(q * 100) / 100,
       formula: 'q = (0.00708 * k * h * ΔP) / (μ * B * ln(re/rw))',
       steps: [
-        `1. Compute ln(re/rw) = ln(${r_e_ft}/${r_w_ft}) = ${Math.round(ln_ratio * 10000) / 10000}`,
+        `1. Compute ln(re/rw) = ln(${re}/${rw}) = ${Math.round(ln_ratio * 10000) / 10000}`,
         `2. Numerator = 0.00708 * ${k_md} * ${h_ft} * ${p_diff_psi} = ${Math.round(numerator * 100) / 100}`,
         `3. Denominator = ${mu_cp} * ${b_vol} * ${Math.round(ln_ratio * 10000) / 10000} = ${Math.round(denominator * 100) / 100}`,
         `4. Result q = ${Math.round(q * 100) / 100} STB/D`
       ],
       reference: 'Petroleum Engineering Handbook Vol 1 & Vol 5'
     });
-  };
+  }
 
-  // Pure Client-Side Hydrostatic Pressure Calculator
-  const handleCalcHydro = () => {
-    const { mud_weight_ppg, tvd_ft } = hydroParams;
-    const gradient = 0.052 * mud_weight_ppg;
-    const p_hydro = gradient * tvd_ft;
+  function handleCalcHydro() {
+    const mw = hydroParams.mud_weight_ppg || 0;
+    const tvd = hydroParams.tvd_ft || 0;
+    const gradient = 0.052 * mw;
+    const p_hydro = gradient * tvd;
 
     setHydroResult({
       pressure_psi: Math.round(p_hydro * 100) / 100,
       gradient_psi_ft: Math.round(gradient * 10000) / 10000,
       reference: 'Petroleum Engineering Handbook Vol 2 (Drilling Engineering Ch. 1)'
     });
-  };
+  }
 
   const unitOptions = {
     pressure: ['psi', 'bar', 'kPa', 'MPa', 'atm'],
@@ -204,18 +217,14 @@ export default function ToolsPanel({ isOpen, onClose }) {
                   type="number"
                   className="form-input"
                   value={valInput}
-                  onChange={(e) => setValInput(e.target.value)}
+                  onChange={(e) => setValInput(parseFloat(e.target.value) || 0)}
                 />
               </div>
-
-              <button className="btn-accent" style={{ width: '100%', marginTop: '1rem' }} onClick={handleConvert}>
-                Convert Units
-              </button>
 
               {convertedResult && (
                 <div style={{ marginTop: '1.25rem', background: 'var(--bg-primary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                   <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Converted Output:</div>
-                  <div style={{ fontSize: '1.5rem', fontWeight: '700', color: 'var(--accent-amber)', fontFamily: 'var(--font-mono)' }}>
+                  <div style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--accent-amber)', fontFamily: 'var(--font-mono)' }}>
                     {convertedResult.value} {toUnit}
                   </div>
                   <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
@@ -289,19 +298,15 @@ export default function ToolsPanel({ isOpen, onClose }) {
                 </div>
               </div>
 
-              <button className="btn-accent" style={{ width: '100%', marginTop: '1rem' }} onClick={handleCalcDarcy}>
-                Calculate Flow Rate
-              </button>
-
               {darcyResult && (
                 <div style={{ marginTop: '1.25rem', background: 'var(--bg-primary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                   <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Calculated Flow Rate (q):</div>
-                  <div style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--accent-amber)', fontFamily: 'var(--font-mono)' }}>
+                  <div style={{ fontSize: '1.8rem', fontWeight: '700', color: 'var(--accent-amber)', fontFamily: 'var(--font-mono)' }}>
                     {darcyResult.flow_rate_stbd} STB/D
                   </div>
                   <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
                     <strong>Calculation Steps:</strong>
-                    {darcyResult.steps.map((st, i) => (
+                    {darcyResult.steps?.map((st, i) => (
                       <div key={i}>{st}</div>
                     ))}
                   </div>
@@ -340,14 +345,10 @@ export default function ToolsPanel({ isOpen, onClose }) {
                 </div>
               </div>
 
-              <button className="btn-accent" style={{ width: '100%', marginTop: '1rem' }} onClick={handleCalcHydro}>
-                Calculate Hydrostatic Pressure
-              </button>
-
               {hydroResult && (
                 <div style={{ marginTop: '1.25rem', background: 'var(--bg-primary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
                   <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Hydrostatic Bottomhole Pressure:</div>
-                  <div style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--accent-amber)', fontFamily: 'var(--font-mono)' }}>
+                  <div style={{ fontSize: '1.8rem', fontWeight: '700', color: 'var(--accent-amber)', fontFamily: 'var(--font-mono)' }}>
                     {hydroResult.pressure_psi} psi
                   </div>
                   <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
