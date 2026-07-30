@@ -19,102 +19,57 @@ export default function ToolsPanel({ isOpen, onClose }) {
   const [fromUnit, setFromUnit] = useState('psi');
   const [toUnit, setToUnit] = useState('bar');
   const [valInput, setValInput] = useState(1000);
-  const [convertedResult, setConvertedResult] = useState(null);
 
   // Darcy Calculator State
-  const [darcyParams, setDarcyParams] = useState({
-    k_md: 150,
-    h_ft: 40,
-    p_diff_psi: 450,
-    mu_cp: 1.2,
-    b_vol: 1.15,
-    r_w_ft: 0.33,
-    r_e_ft: 660
-  });
-  const [darcyResult, setDarcyResult] = useState(null);
+  const [k_md, setKmd] = useState(150);
+  const [h_ft, setHft] = useState(40);
+  const [p_diff_psi, setPdiff] = useState(450);
+  const [mu_cp, setMucp] = useState(1.2);
+  const [b_vol, setBvol] = useState(1.15);
+  const [r_e_ft, setRe] = useState(660);
+  const [r_w_ft, setRw] = useState(0.33);
 
   // Hydrostatic Calculator State
-  const [hydroParams, setHydroParams] = useState({ mud_weight_ppg: 10.5, tvd_ft: 12000 });
-  const [hydroResult, setHydroResult] = useState(null);
-
-  // Auto-calculate outputs on load and input change
-  useEffect(() => {
-    handleConvert();
-  }, [category, fromUnit, toUnit, valInput]);
-
-  useEffect(() => {
-    handleCalcDarcy();
-  }, [darcyParams]);
-
-  useEffect(() => {
-    handleCalcHydro();
-  }, [hydroParams]);
+  const [mud_weight_ppg, setMudWeight] = useState(10.5);
+  const [tvd_ft, setTvd] = useState(12000);
 
   if (!isOpen) return null;
 
-  function handleConvert() {
-    const val = parseFloat(valInput) || 0;
-    if (category === 'temperature') {
-      let res = val;
-      if (fromUnit === 'degF' && toUnit === 'degC') res = (val - 32) * (5 / 9);
-      else if (fromUnit === 'degC' && toUnit === 'degF') res = val * (9 / 5) + 32;
-      else if (fromUnit === 'degF' && toUnit === 'K') res = (val - 32) * (5 / 9) + 273.15;
-      else if (fromUnit === 'K' && toUnit === 'degF') res = (val - 273.15) * (9 / 5) + 32;
-      else if (fromUnit === 'degC' && toUnit === 'K') res = val + 273.15;
-      else if (fromUnit === 'K' && toUnit === 'degC') res = val - 273.15;
+  // 1. Calculate Unit Conversion
+  const val = parseFloat(valInput) || 0;
+  let convertedVal = 0;
+  let convertFormula = '';
 
-      setConvertedResult({
-        value: Math.round(res * 10000) / 10000,
-        formula: `Temperature conversion from ${fromUnit} to ${toUnit}`
-      });
-      return;
-    }
-
-    const cat = UNITS_MAP[category];
-    if (cat && cat[fromUnit] && cat[toUnit]) {
-      const baseVal = val * cat[fromUnit];
-      const converted = baseVal / cat[toUnit];
-      setConvertedResult({
-        value: Math.round(converted * 10000) / 10000,
-        formula: `${val} ${fromUnit} * (${cat[fromUnit]} / ${cat[toUnit]}) = ${Math.round(converted * 10000) / 10000} ${toUnit}`
-      });
-    }
+  if (category === 'temperature') {
+    if (fromUnit === 'degF' && toUnit === 'degC') convertedVal = (val - 32) * (5 / 9);
+    else if (fromUnit === 'degC' && toUnit === 'degF') convertedVal = val * (9 / 5) + 32;
+    else if (fromUnit === 'degF' && toUnit === 'K') convertedVal = (val - 32) * (5 / 9) + 273.15;
+    else if (fromUnit === 'K' && toUnit === 'degF') convertedVal = (val - 273.15) * (9 / 5) + 32;
+    else if (fromUnit === 'degC' && toUnit === 'K') convertedVal = val + 273.15;
+    else if (fromUnit === 'K' && toUnit === 'degC') convertedVal = val - 273.15;
+    else convertedVal = val;
+    convertFormula = `Temperature conversion from ${fromUnit} to ${toUnit}`;
+  } else {
+    const cat = UNITS_MAP[category] || UNITS_MAP.pressure;
+    const fFactor = cat[fromUnit] || 1.0;
+    const tFactor = cat[toUnit] || 1.0;
+    convertedVal = (val * fFactor) / tFactor;
+    convertFormula = `${val} ${fromUnit} * (${fFactor} / ${tFactor}) = ${Math.round(convertedVal * 10000) / 10000} ${toUnit}`;
   }
 
-  function handleCalcDarcy() {
-    const { k_md, h_ft, p_diff_psi, mu_cp, b_vol, r_w_ft, r_e_ft } = darcyParams;
-    const rw = r_w_ft > 0 ? r_w_ft : 0.33;
-    const re = r_e_ft > rw ? r_e_ft : 660;
-    const ln_ratio = Math.log(re / rw);
-    const numerator = 0.00708 * (k_md || 0) * (h_ft || 0) * (p_diff_psi || 0);
-    const denominator = (mu_cp || 1) * (b_vol || 1) * ln_ratio;
-    const q = denominator > 0 ? numerator / denominator : 0;
+  // 2. Calculate Darcy Radial Flow Rate
+  const rw = parseFloat(r_w_ft) > 0 ? parseFloat(r_w_ft) : 0.33;
+  const re = parseFloat(r_e_ft) > rw ? parseFloat(r_e_ft) : 660;
+  const ln_ratio = Math.log(re / rw);
+  const darcyNumerator = 0.00708 * (parseFloat(k_md) || 0) * (parseFloat(h_ft) || 0) * (parseFloat(p_diff_psi) || 0);
+  const darcyDenominator = (parseFloat(mu_cp) || 1) * (parseFloat(b_vol) || 1) * ln_ratio;
+  const darcyQ = darcyDenominator > 0 ? darcyNumerator / darcyDenominator : 0;
 
-    setDarcyResult({
-      flow_rate_stbd: Math.round(q * 100) / 100,
-      formula: 'q = (0.00708 * k * h * ΔP) / (μ * B * ln(re/rw))',
-      steps: [
-        `1. Compute ln(re/rw) = ln(${re}/${rw}) = ${Math.round(ln_ratio * 10000) / 10000}`,
-        `2. Numerator = 0.00708 * ${k_md} * ${h_ft} * ${p_diff_psi} = ${Math.round(numerator * 100) / 100}`,
-        `3. Denominator = ${mu_cp} * ${b_vol} * ${Math.round(ln_ratio * 10000) / 10000} = ${Math.round(denominator * 100) / 100}`,
-        `4. Result q = ${Math.round(q * 100) / 100} STB/D`
-      ],
-      reference: 'Petroleum Engineering Handbook Vol 1 & Vol 5'
-    });
-  }
-
-  function handleCalcHydro() {
-    const mw = hydroParams.mud_weight_ppg || 0;
-    const tvd = hydroParams.tvd_ft || 0;
-    const gradient = 0.052 * mw;
-    const p_hydro = gradient * tvd;
-
-    setHydroResult({
-      pressure_psi: Math.round(p_hydro * 100) / 100,
-      gradient_psi_ft: Math.round(gradient * 10000) / 10000,
-      reference: 'Petroleum Engineering Handbook Vol 2 (Drilling Engineering Ch. 1)'
-    });
-  }
+  // 3. Calculate Hydrostatic Pressure
+  const mw = parseFloat(mud_weight_ppg) || 0;
+  const tvd = parseFloat(tvd_ft) || 0;
+  const hydroGradient = 0.052 * mw;
+  const hydroPressure = hydroGradient * tvd;
 
   const unitOptions = {
     pressure: ['psi', 'bar', 'kPa', 'MPa', 'atm'],
@@ -217,21 +172,20 @@ export default function ToolsPanel({ isOpen, onClose }) {
                   type="number"
                   className="form-input"
                   value={valInput}
-                  onChange={(e) => setValInput(parseFloat(e.target.value) || 0)}
+                  onChange={(e) => setValInput(e.target.value)}
                 />
               </div>
 
-              {convertedResult && (
-                <div style={{ marginTop: '1.25rem', background: 'var(--bg-primary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Converted Output:</div>
-                  <div style={{ fontSize: '1.6rem', fontWeight: '700', color: 'var(--accent-amber)', fontFamily: 'var(--font-mono)' }}>
-                    {convertedResult.value} {toUnit}
-                  </div>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
-                    {convertedResult.formula}
-                  </div>
+              {/* Converted Result Output Box */}
+              <div style={{ marginTop: '1.25rem', background: '#090d16', padding: '1.25rem', borderRadius: '8px', border: '1px solid var(--accent-amber)' }}>
+                <div style={{ fontSize: '0.85rem', color: '#94a3b8', fontWeight: 600 }}>CALCULATED RESULT:</div>
+                <div style={{ fontSize: '2rem', fontWeight: '700', color: '#f59e0b', fontFamily: 'var(--font-mono)', margin: '0.25rem 0' }}>
+                  {Math.round(convertedVal * 10000) / 10000} {toUnit}
                 </div>
-              )}
+                <div style={{ fontSize: '0.8rem', color: '#cbd5e1' }}>
+                  {convertFormula}
+                </div>
+              </div>
             </div>
           )}
 
@@ -247,8 +201,8 @@ export default function ToolsPanel({ isOpen, onClose }) {
                   <input
                     type="number"
                     className="form-input"
-                    value={darcyParams.k_md}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, k_md: parseFloat(e.target.value) || 0 })}
+                    value={k_md}
+                    onChange={(e) => setKmd(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -256,8 +210,8 @@ export default function ToolsPanel({ isOpen, onClose }) {
                   <input
                     type="number"
                     className="form-input"
-                    value={darcyParams.h_ft}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, h_ft: parseFloat(e.target.value) || 0 })}
+                    value={h_ft}
+                    onChange={(e) => setHft(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -265,8 +219,8 @@ export default function ToolsPanel({ isOpen, onClose }) {
                   <input
                     type="number"
                     className="form-input"
-                    value={darcyParams.p_diff_psi}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, p_diff_psi: parseFloat(e.target.value) || 0 })}
+                    value={p_diff_psi}
+                    onChange={(e) => setPdiff(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -274,8 +228,8 @@ export default function ToolsPanel({ isOpen, onClose }) {
                   <input
                     type="number"
                     className="form-input"
-                    value={darcyParams.mu_cp}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, mu_cp: parseFloat(e.target.value) || 0 })}
+                    value={mu_cp}
+                    onChange={(e) => setMucp(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -283,8 +237,8 @@ export default function ToolsPanel({ isOpen, onClose }) {
                   <input
                     type="number"
                     className="form-input"
-                    value={darcyParams.b_vol}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, b_vol: parseFloat(e.target.value) || 0 })}
+                    value={b_vol}
+                    onChange={(e) => setBvol(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -292,29 +246,29 @@ export default function ToolsPanel({ isOpen, onClose }) {
                   <input
                     type="number"
                     className="form-input"
-                    value={darcyParams.r_e_ft}
-                    onChange={(e) => setDarcyParams({ ...darcyParams, r_e_ft: parseFloat(e.target.value) || 0 })}
+                    value={r_e_ft}
+                    onChange={(e) => setRe(e.target.value)}
                   />
                 </div>
               </div>
 
-              {darcyResult && (
-                <div style={{ marginTop: '1.25rem', background: 'var(--bg-primary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Calculated Flow Rate (q):</div>
-                  <div style={{ fontSize: '1.8rem', fontWeight: '700', color: 'var(--accent-amber)', fontFamily: 'var(--font-mono)' }}>
-                    {darcyResult.flow_rate_stbd} STB/D
-                  </div>
-                  <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
-                    <strong>Calculation Steps:</strong>
-                    {darcyResult.steps?.map((st, i) => (
-                      <div key={i}>{st}</div>
-                    ))}
-                  </div>
-                  <div className="citation-box">
-                    Source: {darcyResult.reference}
-                  </div>
+              {/* Darcy Output Box */}
+              <div style={{ marginTop: '1.25rem', background: '#090d16', padding: '1.25rem', borderRadius: '8px', border: '1px solid var(--accent-amber)' }}>
+                <div style={{ fontSize: '0.85rem', color: '#94a3b8', fontWeight: 600 }}>CALCULATED RADIAL FLOW RATE (q):</div>
+                <div style={{ fontSize: '2.2rem', fontWeight: '700', color: '#f59e0b', fontFamily: 'var(--font-mono)', margin: '0.25rem 0' }}>
+                  {Math.round(darcyQ * 100) / 100} STB/D
                 </div>
-              )}
+                <div style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#cbd5e1' }}>
+                  <strong>Calculation Steps:</strong>
+                  <div>1. Compute ln(re/rw) = ln({re}/{rw}) = {Math.round(ln_ratio * 10000) / 10000}</div>
+                  <div>2. Numerator = 0.00708 * {k_md} * {h_ft} * {p_diff_psi} = {Math.round(darcyNumerator * 100) / 100}</div>
+                  <div>3. Denominator = {mu_cp} * {b_vol} * {Math.round(ln_ratio * 10000) / 10000} = {Math.round(darcyDenominator * 100) / 100}</div>
+                  <div>4. Result q = {Math.round(darcyQ * 100) / 100} STB/D</div>
+                </div>
+                <div className="citation-box">
+                  Source: Petroleum Engineering Handbook Vol 1 & Vol 5
+                </div>
+              </div>
             </div>
           )}
 
@@ -330,8 +284,8 @@ export default function ToolsPanel({ isOpen, onClose }) {
                   <input
                     type="number"
                     className="form-input"
-                    value={hydroParams.mud_weight_ppg}
-                    onChange={(e) => setHydroParams({ ...hydroParams, mud_weight_ppg: parseFloat(e.target.value) || 0 })}
+                    value={mud_weight_ppg}
+                    onChange={(e) => setMudWeight(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -339,26 +293,25 @@ export default function ToolsPanel({ isOpen, onClose }) {
                   <input
                     type="number"
                     className="form-input"
-                    value={hydroParams.tvd_ft}
-                    onChange={(e) => setHydroParams({ ...hydroParams, tvd_ft: parseFloat(e.target.value) || 0 })}
+                    value={tvd_ft}
+                    onChange={(e) => setTvd(e.target.value)}
                   />
                 </div>
               </div>
 
-              {hydroResult && (
-                <div style={{ marginTop: '1.25rem', background: 'var(--bg-primary)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Hydrostatic Bottomhole Pressure:</div>
-                  <div style={{ fontSize: '1.8rem', fontWeight: '700', color: 'var(--accent-amber)', fontFamily: 'var(--font-mono)' }}>
-                    {hydroResult.pressure_psi} psi
-                  </div>
-                  <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
-                    Gradient: {hydroResult.gradient_psi_ft} psi/ft
-                  </div>
-                  <div className="citation-box">
-                    Source: {hydroResult.reference}
-                  </div>
+              {/* Hydrostatic Output Box */}
+              <div style={{ marginTop: '1.25rem', background: '#090d16', padding: '1.25rem', borderRadius: '8px', border: '1px solid var(--accent-amber)' }}>
+                <div style={{ fontSize: '0.85rem', color: '#94a3b8', fontWeight: 600 }}>HYDROSTATIC BOTTOMHOLE PRESSURE:</div>
+                <div style={{ fontSize: '2.2rem', fontWeight: '700', color: '#f59e0b', fontFamily: 'var(--font-mono)', margin: '0.25rem 0' }}>
+                  {Math.round(hydroPressure * 100) / 100} psi
                 </div>
-              )}
+                <div style={{ fontSize: '0.85rem', color: '#cbd5e1', marginTop: '0.25rem' }}>
+                  Pressure Gradient: {Math.round(hydroGradient * 10000) / 10000} psi/ft
+                </div>
+                <div className="citation-box">
+                  Source: Petroleum Engineering Handbook Vol 2 (Drilling Engineering Ch. 1)
+                </div>
+              </div>
             </div>
           )}
         </div>

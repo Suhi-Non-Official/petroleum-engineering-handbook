@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Reader from './components/Reader';
@@ -13,13 +13,16 @@ export default function App() {
   const [pageData, setPageData] = useState(null);
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Cache loaded volume pages in memory for 100% instant page turns in static mode
+  const volPagesCache = useRef({});
+
   // Modals & Panels state
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const [isRightPanelOpen, setIsRightPanelOpen] = useState(true);
   const [theme, setTheme] = useState('dark');
 
-  // User state
+  // User state with localStorage persistence
   const [userState, setUserState] = useState(() => {
     const saved = localStorage.getItem('petroleum_user_state');
     return saved ? JSON.parse(saved) : { bookmarks: [], notes: [], history: [] };
@@ -38,7 +41,6 @@ export default function App() {
       })
       .then((data) => setCollectionData(data))
       .catch(() => {
-        // Fallback to static JSON file for GitHub Pages
         fetch('./data/global/collection.json')
           .then((res) => res.json())
           .then((data) => setCollectionData(data))
@@ -46,10 +48,11 @@ export default function App() {
       });
   }, []);
 
-  // Fetch Current Page Metadata & Text (API with Static Fallback)
+  // Fetch Page Data with In-Memory Caching
   useEffect(() => {
     if (!selectedVol || !activePdfPage) return;
 
+    // Try API first
     fetch(`/api/page/${selectedVol}/${activePdfPage}`)
       .then((res) => {
         if (!res.ok) throw new Error('API offline');
@@ -57,24 +60,40 @@ export default function App() {
       })
       .then((data) => setPageData(data))
       .catch(() => {
-        // Fallback to static pages JSON for GitHub Pages
-        fetch(`./data/volumes/${selectedVol}/pages.json`)
-          .then((res) => res.json())
-          .then((pages) => {
-            const match = pages.find((p) => p.pdf_page === activePdfPage) || pages[0];
-            setPageData({
-              vol_id: selectedVol,
-              pdf_page: activePdfPage,
-              printed_page: match?.printed_page || activePdfPage,
-              chapter_num: match?.chapter_num || '1',
-              chapter_title: match?.chapter_title || 'General Engineering',
-              section_num: match?.section_num || '',
-              section_title: match?.section_title || '',
-              references: match?.references || [],
-              text_content: match?.text_content || 'Handbook content page preview.'
-            });
-          })
-          .catch((err) => console.error('Failed to load static page data:', err));
+        // Static mode: check in-memory cache
+        if (volPagesCache.current[selectedVol]) {
+          const pages = volPagesCache.current[selectedVol];
+          const match = pages.find((p) => p.pdf_page === activePdfPage) || pages[0];
+          setPageData({
+            vol_id: selectedVol,
+            pdf_page: activePdfPage,
+            printed_page: match?.printed_page || activePdfPage,
+            chapter_num: match?.chapter_num || '1',
+            chapter_title: match?.chapter_title || 'General Engineering',
+            section_num: match?.section_num || '',
+            section_title: match?.section_title || '',
+            text_content: match?.text_content || `Volume ${selectedVol.replace('vol-', '')} — Page ${activePdfPage} content.`
+          });
+        } else {
+          // Load volume pages.json into cache once
+          fetch(`./data/volumes/${selectedVol}/pages.json`)
+            .then((res) => res.json())
+            .then((pages) => {
+              volPagesCache.current[selectedVol] = pages;
+              const match = pages.find((p) => p.pdf_page === activePdfPage) || pages[0];
+              setPageData({
+                vol_id: selectedVol,
+                pdf_page: activePdfPage,
+                printed_page: match?.printed_page || activePdfPage,
+                chapter_num: match?.chapter_num || '1',
+                chapter_title: match?.chapter_title || 'General Engineering',
+                section_num: match?.section_num || '',
+                section_title: match?.section_title || '',
+                text_content: match?.text_content || `Volume ${selectedVol.replace('vol-', '')} — Page ${activePdfPage} content.`
+              });
+            })
+            .catch((err) => console.error('Failed to load volume static pages:', err));
+        }
       });
   }, [selectedVol, activePdfPage]);
 
