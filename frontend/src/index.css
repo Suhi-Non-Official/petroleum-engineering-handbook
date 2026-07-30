@@ -345,11 +345,12 @@ body {
 
 .reader-viewport {
   flex: 1;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
   display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
   background: #525659;
 }
 

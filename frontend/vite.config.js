@@ -7,7 +7,7 @@ export default defineConfig({
   base: './', // Enable relative paths for GitHub Pages
   build: {
     outDir: '../docs', // Output directly to root /docs folder for GitHub Pages
-    emptyOutDir: true
+    emptyOutDir: false
   },
   server: {
     port: 3000,
