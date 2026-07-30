@@ -1,12 +1,11 @@
 import React from 'react';
-import { BookOpen, Search, Wrench, Bot, Sun, Moon, Maximize, ShieldAlert } from 'lucide-react';
+import { BookOpen, Search, Wrench, Sun, Moon, Maximize } from 'lucide-react';
 
 export default function Navbar({
   selectedVol,
   onSelectVol,
   onOpenSearch,
   onOpenTools,
-  onOpenAI,
   theme,
   onToggleTheme,
   onToggleFullscreen
@@ -51,11 +50,6 @@ export default function Navbar({
         <button className="btn-accent" onClick={onOpenTools}>
           <Wrench size={16} />
           <span>Engineering Tools</span>
-        </button>
-
-        <button className="btn-accent" style={{ background: 'var(--accent-blue)', color: '#fff' }} onClick={onOpenAI}>
-          <Bot size={16} />
-          <span>Ask AI</span>
         </button>
 
         <button className="btn-icon" onClick={onToggleTheme} title="Toggle Theme">

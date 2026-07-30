@@ -5,7 +5,6 @@ import Reader from './components/Reader';
 import RightPanel from './components/RightPanel';
 import SearchModal from './components/SearchModal';
 import ToolsPanel from './components/ToolsPanel';
-import AIAssistant from './components/AIAssistant';
 
 export default function App() {
   const [collectionData, setCollectionData] = useState(null);
@@ -17,7 +16,6 @@ export default function App() {
   // Modals & Panels state
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
-  const [isAIOpen, setIsAIOpen] = useState(false);
   const [isRightPanelOpen, setIsRightPanelOpen] = useState(true);
   const [theme, setTheme] = useState('dark');
 
@@ -80,15 +78,6 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [activePdfPage, selectedVol, collectionData]);
 
-  const handleNavigateToPage = (volIdOrPage, pageMaybe) => {
-    if (typeof volIdOrPage === 'string') {
-      setSelectedVol(volIdOrPage);
-      setActivePdfPage(pageMaybe || 1);
-    } else {
-      setActivePdfPage(volIdOrPage);
-    }
-  };
-
   const handleAddBookmark = (bm) => {
     fetch('/api/user/bookmark', {
       method: 'POST',
@@ -99,12 +88,24 @@ export default function App() {
       .then((data) => setUserState((prev) => ({ ...prev, bookmarks: data.bookmarks })));
   };
 
+  const handleDeleteBookmark = (bmId) => {
+    fetch(`/api/user/bookmark/${bmId}`, { method: 'DELETE' })
+      .then((res) => res.json())
+      .then((data) => setUserState((prev) => ({ ...prev, bookmarks: data.bookmarks })));
+  };
+
   const handleAddNote = (note) => {
     fetch('/api/user/note', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(note)
     })
+      .then((res) => res.json())
+      .then((data) => setUserState((prev) => ({ ...prev, notes: data.notes })));
+  };
+
+  const handleDeleteNote = (noteId) => {
+    fetch(`/api/user/note/${noteId}`, { method: 'DELETE' })
       .then((res) => res.json())
       .then((data) => setUserState((prev) => ({ ...prev, notes: data.notes })));
   };
@@ -135,7 +136,6 @@ export default function App() {
         }}
         onOpenSearch={() => setIsSearchOpen(true)}
         onOpenTools={() => setIsToolsOpen(true)}
-        onOpenAI={() => setIsAIOpen(true)}
         theme={theme}
         onToggleTheme={toggleTheme}
         onToggleFullscreen={toggleFullscreen}
@@ -150,6 +150,8 @@ export default function App() {
           onNavigateToPage={(pg) => setActivePdfPage(pg)}
           userState={userState}
           onAddBookmark={handleAddBookmark}
+          onDeleteBookmark={handleDeleteBookmark}
+          onDeleteNote={handleDeleteNote}
         />
 
         <Reader
@@ -168,7 +170,6 @@ export default function App() {
             volId={selectedVol}
             pdfPage={activePdfPage}
             onClose={() => setIsRightPanelOpen(false)}
-            onNavigateToPage={handleNavigateToPage}
             onAddNote={handleAddNote}
           />
         )}
@@ -185,15 +186,6 @@ export default function App() {
       />
 
       <ToolsPanel isOpen={isToolsOpen} onClose={() => setIsToolsOpen(false)} />
-
-      <AIAssistant
-        isOpen={isAIOpen}
-        onClose={() => setIsAIOpen(false)}
-        onNavigateToPage={(vol_id, pdf_page) => {
-          setSelectedVol(vol_id);
-          setActivePdfPage(pdf_page);
-        }}
-      />
     </div>
   );
 }

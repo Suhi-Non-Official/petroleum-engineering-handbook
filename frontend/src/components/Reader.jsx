@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Maximize2, Columns, Image as ImageIcon, BookOpen, Layers } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Columns, Image as ImageIcon } from 'lucide-react';
 
 export default function Reader({
   volId,
@@ -11,8 +11,7 @@ export default function Reader({
   searchQuery
 }) {
   const [zoom, setZoom] = useState(100);
-  const [viewMode, setViewMode] = useState('single'); // single, canvas, split
-  const [fitMode, setFitMode] = useState('width');
+  const [viewMode, setViewMode] = useState('canvas'); // Default to canvas (High-Resolution Image View)
 
   const handlePrev = () => {
     if (pdfPage > 1) onNavigate(pdfPage - 1);
@@ -24,7 +23,6 @@ export default function Reader({
 
   const handleZoomIn = () => setZoom((z) => Math.min(z + 15, 200));
   const handleZoomOut = () => setZoom((z) => Math.max(z - 15, 60));
-  const handleResetZoom = () => setZoom(100);
 
   const highlightedText = (text) => {
     if (!searchQuery || !text) return text;
@@ -78,8 +76,8 @@ export default function Reader({
 
           <button
             className={`btn-icon ${viewMode === 'canvas' ? 'active' : ''}`}
-            onClick={() => setViewMode(viewMode === 'canvas' ? 'single' : 'canvas')}
-            title="Toggle High-Res PDF Image View"
+            onClick={() => setViewMode(viewMode === 'canvas' ? 'text' : 'canvas')}
+            title="Toggle View Mode (High-Res Image / Text)"
           >
             <ImageIcon size={16} />
           </button>
@@ -106,9 +104,9 @@ export default function Reader({
             <span>HANDBOOK PAGE {pageData?.printed_page || pdfPage} (PDF P. {pdfPage})</span>
           </div>
 
-          {viewMode === 'canvas' || pageData?.has_ocr ? (
+          {viewMode === 'canvas' ? (
             <div>
-              <div style={{ background: '#fef3c7', color: '#92400e', padding: '0.4rem 0.75rem', borderRadius: '4px', fontSize: '0.75rem', marginBottom: '1rem' }}>
+              <div style={{ background: 'rgba(245, 158, 11, 0.15)', color: 'var(--accent-amber)', padding: '0.4rem 0.75rem', borderRadius: '4px', fontSize: '0.75rem', marginBottom: '1rem', fontWeight: 600 }}>
                 High-Resolution Original PDF Image View Active
               </div>
               <img

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { X, ExternalLink, FileText, Layers, BookmarkPlus } from 'lucide-react';
+import { X, ExternalLink, FileText } from 'lucide-react';
 
 export default function RightPanel({
   pageData,
   volId,
   pdfPage,
   onClose,
-  onNavigateToPage,
   onAddNote
 }) {
   const [noteText, setNoteText] = useState('');
@@ -25,14 +24,14 @@ export default function RightPanel({
   return (
     <aside className="right-panel">
       <div className="right-panel-header">
-        <span>Page References & Tools</span>
+        <span>Page References & Notes</span>
         <button className="btn-icon" onClick={onClose}>
           <X size={16} />
         </button>
       </div>
 
       <div className="sidebar-content">
-        <div style={{ marginBottom: '1.25rem' }}>
+        <div style={{ marginBottom: '1.5rem' }}>
           <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--accent-amber)', display: 'block', marginBottom: '0.5rem' }}>
             Detected Cross-References
           </span>
@@ -54,38 +53,21 @@ export default function RightPanel({
           )}
         </div>
 
-        <div style={{ marginBottom: '1.25rem' }}>
+        <div>
           <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-primary)', display: 'block', marginBottom: '0.5rem' }}>
             Add Note for Page {pdfPage}
           </span>
           <textarea
             className="form-input"
-            rows={4}
-            placeholder="Type your notes or reference observations here..."
+            rows={5}
+            placeholder="Type your notes or observations for this page..."
             value={noteText}
             onChange={(e) => setNoteText(e.target.value)}
             style={{ width: '100%', marginBottom: '0.5rem' }}
           />
-          <button className="btn-accent" style={{ width: '100%', padding: '0.35rem 0.6rem', fontSize: '0.8rem' }} onClick={handleSaveNote}>
+          <button className="btn-accent" style={{ width: '100%', padding: '0.4rem 0.6rem', fontSize: '0.8rem' }} onClick={handleSaveNote}>
             <FileText size={14} /> Save Note
           </button>
-        </div>
-
-        <div>
-          <span style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-primary)', display: 'block', marginBottom: '0.5rem' }}>
-            Related Handbook Topics
-          </span>
-          <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>
-            <div style={{ padding: '0.4rem', borderBottom: '1px solid var(--border-color)', cursor: 'pointer' }}>
-              → Fluid properties and PVT analysis
-            </div>
-            <div style={{ padding: '0.4rem', borderBottom: '1px solid var(--border-color)', cursor: 'pointer' }}>
-              → Material balance equations
-            </div>
-            <div style={{ padding: '0.4rem', borderBottom: '1px solid var(--border-color)', cursor: 'pointer' }}>
-              → Wellbore transient pressure testing
-            </div>
-          </div>
         </div>
       </div>
     </aside>

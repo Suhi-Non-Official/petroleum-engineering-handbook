@@ -45,9 +45,7 @@ def load_user_state():
     return {
         "bookmarks": [],
         "notes": [],
-        "highlights": [],
-        "history": [],
-        "favorites": []
+        "history": []
     }
 
 def save_user_state(state):
@@ -141,8 +139,6 @@ def search_handbook(
 ):
     conn = get_db_connection()
     cursor = conn.cursor()
-    
-    # Clean query for FTS5 syntax
     sanitized_q = q.replace('"', '""')
     
     if vol_id and vol_id != "all":
@@ -178,11 +174,7 @@ def search_handbook(
             "snippet": r["snippet"]
         })
 
-    return {
-        "query": q,
-        "count": len(results),
-        "results": results
-    }
+    return {"query": q, "count": len(results), "results": results}
 
 # Unit Converter Route
 class UnitConvertRequest(BaseModel):
@@ -194,8 +186,7 @@ class UnitConvertRequest(BaseModel):
 @app.post("/api/tools/convert")
 def convert_unit_api(req: UnitConvertRequest):
     try:
-        res = convert_units(req.value, req.category, req.from_unit, req.to_unit)
-        return res
+        return convert_units(req.value, req.category, req.from_unit, req.to_unit)
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
@@ -238,78 +229,7 @@ def calculate_api(req: CalculateRequest):
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-# AI RAG Assistant ("Ask the Handbook")
-class AskRequest(BaseModel):
-    question: str
-    vol_filter: Optional[str] = None
-
-@app.post("/api/ai/ask")
-def ask_handbook(req: AskRequest):
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    
-    # Query FTS5 for top 5 relevant handbook snippets
-    words = [w for w in req.question.replace('?', '').split() if len(w) > 3]
-    q_fts = " OR ".join(words[:4]) if words else "petroleum"
-    
-    if req.vol_filter and req.vol_filter != "all":
-        sql = """
-            SELECT vol_id, pdf_page, printed_page, chapter_num, chapter_title, section_num, section_title, text_content
-            FROM pages_meta
-            WHERE text_content LIKE ? AND vol_id = ?
-            LIMIT 4
-        """
-        cursor.execute(sql, (f'%{words[0]}%' if words else '%Darcy%', req.vol_filter))
-    else:
-        sql = """
-            SELECT vol_id, pdf_page, printed_page, chapter_num, chapter_title, section_num, section_title, text_content
-            FROM pages_meta
-            WHERE text_content LIKE ?
-            LIMIT 4
-        """
-        cursor.execute(sql, (f'%{words[0]}%' if words else '%Darcy%',))
-        
-    rows = cursor.fetchall()
-    conn.close()
-    
-    if not rows:
-        return {
-            "question": req.question,
-            "answer": "I could not find sufficient information in the Petroleum Engineering Handbook for your query. Please refine your terms or search directly.",
-            "citations": []
-        }
-        
-    citations = []
-    context_chunks = []
-    
-    for r in rows:
-        vol_num = r["vol_id"].replace("vol-", "")
-        citation_str = f"Volume {vol_num} — Chapter {r['chapter_num']} ({r['chapter_title']}) — Page {r['printed_page']} (PDF p. {r['pdf_page']})"
-        citations.append({
-            "vol_id": r["vol_id"],
-            "pdf_page": r["pdf_page"],
-            "printed_page": r["printed_page"],
-            "chapter_num": r["chapter_num"],
-            "chapter_title": r["chapter_title"],
-            "section_num": r["section_num"],
-            "section_title": r["section_title"],
-            "citation_str": citation_str
-        })
-        snippet_clean = r["text_content"][:300].strip().replace('\n', ' ')
-        context_chunks.append(f"[{citation_str}]: \"{snippet_clean}...\"")
-        
-    formatted_context = "\n\n".join(context_chunks)
-    
-    # Grounded technical summary
-    answer = f"Based strictly on the Petroleum Engineering Handbook collection:\n\n{context_chunks[0]}\n\nReferenced detailed chapters and sections deal explicitly with the relevant physical properties and mathematical formulations outlined above."
-
-    return {
-        "question": req.question,
-        "answer": answer,
-        "citations": citations
-    }
-
-# User Personalization APIs
+# User Personalization APIs with Delete functionality
 @app.get("/api/user/state")
 def get_user_state_api():
     return load_user_state()
@@ -317,21 +237,37 @@ def get_user_state_api():
 @app.post("/api/user/bookmark")
 def add_bookmark(bookmark: Dict):
     state = load_user_state()
+    # Add unique ID if not present
+    bookmark["id"] = bookmark.get("id", f"bm_{int(os.urandom(4).hex(), 16)}")
     state["bookmarks"].append(bookmark)
+    save_user_state(state)
+    return {"status": "success", "bookmarks": state["bookmarks"]}
+
+@app.delete("/api/user/bookmark/{bm_id}")
+def delete_bookmark(bm_id: str):
+    state = load_user_state()
+    state["bookmarks"] = [b for b in state["bookmarks"] if b.get("id") != bm_id and str(b.get("pdf_page")) != bm_id]
     save_user_state(state)
     return {"status": "success", "bookmarks": state["bookmarks"]}
 
 @app.post("/api/user/note")
 def add_note(note: Dict):
     state = load_user_state()
+    note["id"] = note.get("id", f"note_{int(os.urandom(4).hex(), 16)}")
     state["notes"].append(note)
+    save_user_state(state)
+    return {"status": "success", "notes": state["notes"]}
+
+@app.delete("/api/user/note/{note_id}")
+def delete_note(note_id: str):
+    state = load_user_state()
+    state["notes"] = [n for n in state["notes"] if n.get("id") != note_id]
     save_user_state(state)
     return {"status": "success", "notes": state["notes"]}
 
 @app.post("/api/user/history")
 def add_history(history_item: Dict):
     state = load_user_state()
-    # Keep last 50 items
     state["history"] = [h for h in state["history"] if not (h.get("vol_id") == history_item.get("vol_id") and h.get("pdf_page") == history_item.get("pdf_page"))]
     state["history"].insert(0, history_item)
     state["history"] = state["history"][:50]

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ListTree, Bookmark, FileText, History, Star, ChevronDown, ChevronRight, BookOpen } from 'lucide-react';
+import { ListTree, Bookmark, FileText, History, ChevronDown, ChevronRight, BookOpen, Trash2 } from 'lucide-react';
 
 export default function Sidebar({
   collectionData,
@@ -8,7 +8,9 @@ export default function Sidebar({
   activePdfPage,
   onNavigateToPage,
   userState,
-  onAddBookmark
+  onAddBookmark,
+  onDeleteBookmark,
+  onDeleteNote
 }) {
   const [activeTab, setActiveTab] = useState('toc');
   const [expandedChs, setExpandedChs] = useState({ '1': true, '2': true });
@@ -125,10 +127,23 @@ export default function Sidebar({
                 <div
                   key={i}
                   className="search-result-item"
-                  onClick={() => onNavigateToPage(bm.pdf_page)}
+                  style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
                 >
-                  <div className="result-location">{bm.vol_id.toUpperCase()} — Page {bm.pdf_page}</div>
-                  <div style={{ fontSize: '0.85rem' }}>{bm.title}</div>
+                  <div onClick={() => onNavigateToPage(bm.pdf_page)} style={{ flex: 1, cursor: 'pointer' }}>
+                    <div className="result-location">{bm.vol_id?.toUpperCase()} — Page {bm.pdf_page}</div>
+                    <div style={{ fontSize: '0.85rem' }}>{bm.title}</div>
+                  </div>
+                  <button
+                    className="btn-icon"
+                    style={{ width: '28px', height: '28px', color: '#ef4444', borderColor: 'transparent' }}
+                    title="Delete Bookmark"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onDeleteBookmark(bm.id || bm.pdf_page);
+                    }}
+                  >
+                    <Trash2 size={14} />
+                  </button>
                 </div>
               ))
             )}
@@ -142,13 +157,27 @@ export default function Sidebar({
             </span>
             {userState?.notes?.length === 0 ? (
               <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textAlign: 'center', marginTop: '2rem' }}>
-                No notes created. Add notes directly from the reader or right panel.
+                No notes created. Add notes directly from the right panel.
               </p>
             ) : (
               userState?.notes?.map((n, i) => (
-                <div key={i} className="search-result-item">
-                  <div className="result-location">{n.vol_id?.toUpperCase()} — Page {n.pdf_page}</div>
-                  <div style={{ fontSize: '0.85rem' }}>{n.text}</div>
+                <div
+                  key={i}
+                  className="search-result-item"
+                  style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}
+                >
+                  <div style={{ flex: 1 }}>
+                    <div className="result-location">{n.vol_id?.toUpperCase()} — Page {n.pdf_page}</div>
+                    <div style={{ fontSize: '0.85rem' }}>{n.text}</div>
+                  </div>
+                  <button
+                    className="btn-icon"
+                    style={{ width: '28px', height: '28px', color: '#ef4444', borderColor: 'transparent' }}
+                    title="Delete Note"
+                    onClick={() => onDeleteNote(n.id)}
+                  >
+                    <Trash2 size={14} />
+                  </button>
                 </div>
               ))
             )}

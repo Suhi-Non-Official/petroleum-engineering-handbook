@@ -15,6 +15,3 @@ data/previews/
 # OS metadata
 .DS_Store
 Thumbs.db
-
-# Optional: Large PDF files (uncomment if making repository public)
-# *.pdf
