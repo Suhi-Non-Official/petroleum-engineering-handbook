@@ -11,7 +11,7 @@ export default function Reader({
   searchQuery
 }) {
   const [zoom, setZoom] = useState(100);
-  const [viewMode, setViewMode] = useState('canvas'); // Default to canvas (High-Resolution Image View)
+  const [viewMode, setViewMode] = useState('canvas'); // Default to High-Resolution Image View
 
   const handlePrev = () => {
     if (pdfPage > 1) onNavigate(pdfPage - 1);
@@ -35,6 +35,10 @@ export default function Reader({
       )
     );
   };
+
+  // Image source path fallback for static GitHub Pages hosting
+  const imageSrc = `/api/page-image/${volId}/${pdfPage}`;
+  const staticFallbackSrc = `./data/previews/${volId}/page_${pdfPage}.jpg`;
 
   return (
     <main className="reader-container">
@@ -110,7 +114,11 @@ export default function Reader({
                 High-Resolution Original PDF Image View Active
               </div>
               <img
-                src={`/api/page-image/${volId}/${pdfPage}`}
+                src={imageSrc}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = staticFallbackSrc;
+                }}
                 alt={`Page ${pdfPage}`}
                 className="scanned-image-view"
               />

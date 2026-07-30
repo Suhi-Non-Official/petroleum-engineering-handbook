@@ -1,0 +1,86 @@
+{
+  "vol_id": "vol-7",
+  "title": "Volume 7: Indexes and Standards",
+  "filename": "Vol 7.pdf",
+  "page_count": 175,
+  "total_words": 89112,
+  "ocr_pages_count": 1,
+  "toc": [
+    {
+      "num": "1",
+      "title": "MASTER AUTHOR INDEX",
+      "page": 6,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": "MASTER SUBJECT INDEX",
+      "page": 16,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "SPE Symbols Standard",
+      "page": 108,
+      "sections": [
+        {
+          "num": "",
+          "title": "Overview of the SPE Symbols Standard",
+          "page": 108
+        },
+        {
+          "num": "",
+          "title": "Basic Symbols in Alphabetical Order",
+          "page": 112
+        },
+        {
+          "num": "",
+          "title": "Economics Symbols in Alphabetical Order",
+          "page": 119
+        },
+        {
+          "num": "",
+          "title": "Symbols in Alphabetical Order",
+          "page": 121
+        },
+        {
+          "num": "",
+          "title": "Subscript Symbols in Alphabetical Order",
+          "page": 138
+        }
+      ]
+    },
+    {
+      "num": "4",
+      "title": "SI Metric Conversion Factors",
+      "page": 146,
+      "sections": [
+        {
+          "num": "",
+          "title": "ALPHABETICAL LIST OF UNITS",
+          "page": 147
+        },
+        {
+          "num": "",
+          "title": "CONVERSION FACTORS FOR THE VARA*",
+          "page": 155
+        },
+        {
+          "num": "",
+          "title": "\u201cMEMORY JOGGER\u201d\u2014METRIC UNITS",
+          "page": 156
+        },
+        {
+          "num": "",
+          "title": "TABLE 1\u2014TABLES OF RECOMMENDED SI UNITS",
+          "page": 158
+        },
+        {
+          "num": "",
+          "title": "TABLE 2\u2014SOME ADDITIONAL APPLICATION STANDARDS",
+          "page": 174
+        }
+      ]
+    }
+  ]
+}

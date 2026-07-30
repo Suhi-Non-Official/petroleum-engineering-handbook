@@ -1,0 +1,961 @@
+{
+  "vol_id": "vol-6",
+  "title": "Volume 6: Emerging and Peripheral Technologies",
+  "filename": "Vol 6.pdf",
+  "page_count": 629,
+  "total_words": 127639,
+  "ocr_pages_count": 34,
+  "toc": [
+    {
+      "num": "1",
+      "title": "Reservoir Geophysics",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".1 Introduction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".2 Attributes",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".3 Imaging and Inversion",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".4 Borehole Seismic and Sonic Methods",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".5 Seismic Time-Lapse Reservoir Monitoring",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".6 Passive Seismic Monitoring",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".7 Hydraulic Fracture Monitoring",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".8 Pore Pressure Prediction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".9 Mechanical Properties and Seismic Properties",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".10 Nonseismic Techniques",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".11 Summary",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "2",
+      "title": "Geologically Based, Geostatistical Reservoir Modeling",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".1 Introduction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".2 Back to Basics: Classical Statistics and Its Role in Geostatistical Modeling",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".3 A Geostatistical Reservoir-Modeling Workflow",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".4 Practical Considerations and Rules of Thumb",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".5 Geologic and Reservoir-Engineering Issues",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".6 Geostatistical Technology Into the Next Decade",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".7 Summary",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "Glossary",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "Intelligent-Well Completions",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".1 Introduction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".2 Historical Perspective",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".3 Fundamentals of Technology",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".4 Operational Considerations",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".5 Field Applications (Case Study Examples)",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".6 Sand Control",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".7 Summary",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "4",
+      "title": "Subsea and Downhole Processing",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".1 Introduction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".2 Subsea Processing",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".3 Downhole Processing",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "5",
+      "title": "Cold Heavy-Oil Production With Sand",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".1 Introduction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".2 CHOPS Reservoirs in Canada",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".3 Production Rate Increase Mechanisms",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".4 Uniform or Channel Growth in the Affected Region?",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".5 Reservoir Assessment and Candidate Screening for CHOPS",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".6 CHOPS Simulation",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".7 Operational Issues in CHOPS",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".8 Sand Management in CHOPS",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".9 Case Histories",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".10 Monitoring CHOPS",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".11 CHOPS and Other Production Technologies",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".12 Summary of CHOPS",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "6",
+      "title": "Coalbed Methane",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".1 Introduction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".2 CBM Reservoir Fundamentals",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".3 Basin Assessment",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".4 Reservoir Evaluation",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".5 Drilling, Coring, and Completions",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".6 Production Operations and Facilities",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".7 Economic and Commercial Considerations",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".8 Case Studies",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".9 Future Trends in CBM Development",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "7",
+      "title": "Tight Gas Reservoirs",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".1 Introduction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".2 Definition of Tight Gas",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".3 The Resource Triangle",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".4 Tight Gas in the United States",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".5 Tight Gas Outside the United States",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".6 Geologic Considerations",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".7 Diagenesis",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".8 Reservoir Continuity",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".9 Regional Tectonics",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".10 Reservoir Considerations",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".11 Drilling and Completion Considerations",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".12 Formation Evaluation",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".13 Log Analyses",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".14 Core Analyses",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".15 Mud Filtrate Invasion",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".16 Formation Mechanical Properties",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".17 Estimating Permeability",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".18 Statistical Correlations",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".19 Developing Databases",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".20 Well Construction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".21 Post-Fracture Reservoir Evaluation Methods",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".22 Estimating Reserves in Tight Gas Reservoirs",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "8",
+      "title": "Monetizing Stranded Gas",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".1 Gas\u2014The Fuel of the 21st Century",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".2 Associated and Nonassociated Gas",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".3 Stranded Gas",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".4 Overview of Gas Transportation Options",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".5 Pipelines",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".6 Compressed Natural Gas",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".7 Liquefied Natural Gas",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".8 Gas to Ammonia and Urea",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".9 Gas to Liquids\u2014Fischer-Tropsch Route",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".10 Gas to Methanol",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".11 Gas to Power",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".12 Evaluation of Gas Monetization Options",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".13 Conclusions",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "Appendix\u2014Abbreviations",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "9",
+      "title": "Geothermal Engineering",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".1 Introduction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".2 Occurrence of Geothermal Energy",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".3 Types of Geothermal Systems",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".4 Geothermal Energy Potential",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".5 Geothermal Exploration",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".6 Geophysical Techniques",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".7 Geothermal Drilling",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".8 Reservoir Engineering",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".9 Field Operations",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".10 Measurements in Geothermal Production Applications",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".11 Geothermal Energy Conversion Systems for the Production of Electrical Power",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "Copyright Notice",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "10",
+      "title": "Risk and Decision Analysis",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".1 Introduction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".2 Historical Perspective",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".3 Language of Risk Analysis and Decision Making",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".4 The Tools of the Trade",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".5 Typical Applications of Technologies",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".6 Engineering and Geoscientific Issues\u2014Avoiding Pitfalls of Deterministic",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Models",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "10",
+      "title": ".7 Design of Uncertainty Models",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".8 Future of Technology for the Next Decade",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "Glossary",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "Appendix\u2014Risk Analysis for the Oil Industry",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "11",
+      "title": "Hydrate Emerging Technologies",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".1 Introduction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".2 Safety and Flow Assurance in Oil/Gas Pipelines, Drillstrings, and Processing",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".3 Transporting Stranded Gas as Hydrates",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".4 Gas Hydrates in Nature: Seafloor Stability",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".5 Gas Hydrates in Nature: Energy Recovery",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".6 Summary and Future Hydrate Research Directions",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        }
+      ]
+    },
+    {
+      "num": "12",
+      "title": "Electromagnetic Heating of Oil",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".1 Introduction",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".2 Historical Perspective",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".3 Electrical Engineering Considerations",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".4 Fluid Flow Modeling Considerations",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".5 Field Tests",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".6 Summary",
+      "page": 1,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".7 Future Technology Development",
+      "page": 1,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 1
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1
+        }
+      ]
+    }
+  ]
+}

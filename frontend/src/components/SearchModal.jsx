@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Search, X, Filter, BookOpen } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 
-export default function SearchModal({ isOpen, onClose, onSelectResult }) {
+export default function SearchModal({ isOpen, selectedVol, onClose, onSelectResult }) {
   const [query, setQuery] = useState('');
   const [volFilter, setVolFilter] = useState('all');
   const [results, setResults] = useState([]);
@@ -17,10 +17,29 @@ export default function SearchModal({ isOpen, onClose, onSelectResult }) {
     try {
       const url = `/api/search?q=${encodeURIComponent(query)}&vol_id=${volFilter}`;
       const res = await fetch(url);
+      if (!res.ok) throw new Error('API offline');
       const data = await res.json();
       setResults(data.results || []);
     } catch (err) {
-      console.error('Search failed:', err);
+      // Static client-side search fallback for GitHub Pages
+      const targetVol = volFilter === 'all' ? (selectedVol || 'vol-1') : volFilter;
+      fetch(`./data/volumes/${targetVol}/pages.json`)
+        .then((res) => res.json())
+        .then((pages) => {
+          const matches = pages
+            .filter((p) => (p.text_content || '').toLowerCase().includes(query.toLowerCase()))
+            .slice(0, 30)
+            .map((p) => ({
+              vol_id: targetVol,
+              pdf_page: p.pdf_page,
+              printed_page: p.printed_page,
+              chapter_num: p.chapter_num,
+              chapter_title: p.chapter_title,
+              snippet: `...${p.text_content?.substring(0, 150)}...`
+            }));
+          setResults(matches);
+        })
+        .catch((e) => console.error('Static search failed:', e));
     } finally {
       setLoading(false);
     }
@@ -44,7 +63,7 @@ export default function SearchModal({ isOpen, onClose, onSelectResult }) {
             <input
               type="text"
               className="search-input-box"
-              placeholder='Search terms, equations, figures (e.g. "Darcy law", "skin factor", "separator")...'
+              placeholder='Search terms (e.g. "Darcy law", "separator", "mud weight")...'
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               autoFocus
@@ -70,12 +89,12 @@ export default function SearchModal({ isOpen, onClose, onSelectResult }) {
 
           {loading ? (
             <div style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-muted)' }}>
-              Searching across 2+ million words in 7 volumes...
+              Searching handbook content...
             </div>
           ) : results.length > 0 ? (
             <div className="results-list">
               <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
-                Found {results.length} matches across collection:
+                Found {results.length} matches:
               </div>
               {results.map((r, i) => (
                 <div
@@ -98,11 +117,11 @@ export default function SearchModal({ isOpen, onClose, onSelectResult }) {
             </div>
           ) : query ? (
             <div style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-muted)' }}>
-              No matches found for "{query}". Try alternative engineering terminology.
+              No matches found for "{query}".
             </div>
           ) : (
             <div style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-muted)' }}>
-              Type your query above to search all 5,626 handbook pages instantly.
+              Type your query above to search all handbook pages instantly.
             </div>
           )}
         </div>

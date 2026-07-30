@@ -1,0 +1,2063 @@
+{
+  "vol_id": "vol-5",
+  "title": "Volume 5: Reservoir Engineering and Petrophysics",
+  "filename": "Vol 5.pdf",
+  "page_count": 1659,
+  "total_words": 630525,
+  "ocr_pages_count": 83,
+  "toc": [
+    {
+      "num": "1",
+      "title": "Reservoir Geology",
+      "page": 9,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".1 Introduction",
+      "page": 9,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".2 External Geometry\u2014Reservoir Traps",
+      "page": 10,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".3 Reservoir Base",
+      "page": 13,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".4 Internal Geometry\u2014Reservoir Architecture",
+      "page": 15,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".5 Carbonate Reservoirs",
+      "page": 17,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".6 Siliciclastic Reservoirs",
+      "page": 24,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 31
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 32
+        }
+      ]
+    },
+    {
+      "num": "2",
+      "title": "Fundamentals of Geophysics",
+      "page": 33,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".1 Introduction",
+      "page": 33,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".2 Impulsive Sources",
+      "page": 34,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".3 Vibrators",
+      "page": 34,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".4 Shear Wave Sources",
+      "page": 35,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".5 Marine Air Guns",
+      "page": 35,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".6 Seismic Sensors",
+      "page": 38,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".7 Seismic Wave Propagation",
+      "page": 40,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".8 Body Waves and Surface Waves",
+      "page": 41,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".9 Seismic Impedance",
+      "page": 43,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".10 Reflection Coefficients",
+      "page": 43,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".11 Seismic Attributes",
+      "page": 45,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".12 Complex Seismic Trace",
+      "page": 45,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".13 Instantaneous Phase and Instantaneous Frequency Calculations",
+      "page": 47,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".14 Applications of Seismic Attributes",
+      "page": 49,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".15 Seismic Interpretation",
+      "page": 50,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".16 Structural Interpretation",
+      "page": 51,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".17 Imaging Reservoir Targets",
+      "page": 53,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".18 Three-Dimensional Seismic Survey Design",
+      "page": 60,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".19 Vertical Seismic Profiling",
+      "page": 67,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".20 Calibrating Seismic Image Time to Depth",
+      "page": 70,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".21 Crosswell Seismic Profiling",
+      "page": 73,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 77
+        },
+        {
+          "num": "",
+          "title": "Glossary",
+          "page": 79
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 83
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "A - Petrophysics",
+      "page": 85,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "A.1 Introduction",
+      "page": 85,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 95
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 95
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "B - Resistivity and SP Logging",
+      "page": 97,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.1 Fundamentals",
+      "page": 97,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.2 The Logging Environment",
+      "page": 98,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.3 Electrode Resistivity Devices",
+      "page": 99,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.4 Induction Logging",
+      "page": 112,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.5 LWD Induction Tools",
+      "page": 125,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.6 Induction vs. Laterolog Measurements",
+      "page": 138,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.7 Microresistivity Logs",
+      "page": 141,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.8 Formation-Resistivity Determination",
+      "page": 143,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.9 Traditional Rt Methods",
+      "page": 143,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.10 SP Log",
+      "page": 147,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.11 Uses and Interpretation of Well Logs",
+      "page": 153,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.12 Shaly Formations",
+      "page": 162,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.13 Dual Water Models",
+      "page": 166,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "B.14 Summary",
+      "page": 169,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 169
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 173
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "C - Acoustic Logging",
+      "page": 175,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "C.1 Introduction",
+      "page": 175,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "C.2 Acoustic Theory and Wave Propagation",
+      "page": 176,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "C.3 Acoustic-Logging Tools",
+      "page": 180,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "C.4 Evolution of Acoustic-Logging Tools",
+      "page": 183,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "C.5 Conventional Applications",
+      "page": 203,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "C.6 Advanced Data Analysis and Applications",
+      "page": 222,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "C.7 Summary",
+      "page": 236,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 236
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 250
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "D - Nuclear Logging",
+      "page": 251,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "D.1 Introduction",
+      "page": 251,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "D.2 The Physics of Nuclear Logs",
+      "page": 252,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "D.3 Nuclear Radiation Transport",
+      "page": 253,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "D.4 Single-Log Interpretation",
+      "page": 257,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "D.5 Logs Exploiting Gamma Rays and Gamma Ray Transport",
+      "page": 262,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "D.6 Passive Gamma Ray Tools",
+      "page": 264,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "D.7 Neutron Logs",
+      "page": 275,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "D.8 Multiple-Log Interpretation",
+      "page": 287,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "D.9 Conclusions",
+      "page": 291,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 292
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 295
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "E - Nuclear Magnetic Resonance Applications in Petrophysics and Formation Evaluation",
+      "page": 297,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.1 Introduction",
+      "page": 297,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.2 Historical Development",
+      "page": 298,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.3 NMR Physics",
+      "page": 300,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.4 NMR Petrophysics",
+      "page": 306,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.5 Logging Tools",
+      "page": 313,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.6 Log Presentation",
+      "page": 319,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.7 NMR Applications",
+      "page": 319,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.8 Combined NMR Applications",
+      "page": 344,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.9 NMR-Log Quality Control",
+      "page": 346,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.10 NMR-Log Job Planning",
+      "page": 348,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.11 Summary",
+      "page": 351,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "E.12 NMR-Tool Mnemonics",
+      "page": 351,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 352
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 354
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 362
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "F - Mud Logging",
+      "page": 365,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "F.1 Introduction",
+      "page": 365,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "F.2 Mud Logging Data Acquisition",
+      "page": 366,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "F.3 Total Gas Analysis",
+      "page": 368,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "F.4 Component Analysis",
+      "page": 369,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "F.5 Cuttings Analysis",
+      "page": 373,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "F.6 Maintaining Data Quality",
+      "page": 376,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "F.7 Formation Evaluation",
+      "page": 376,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "F.8 Drilling Engineering and Operations",
+      "page": 380,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "F.9 Health, Safety, and Environmental Considerations",
+      "page": 383,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 383
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 384
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 385
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "G - Specialized Well-Logging Topics",
+      "page": 387,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "G.1 Introduction",
+      "page": 387,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "G.2 Geometry and Integrity of the Wellbore",
+      "page": 387,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "G.3 Borehole Imaging",
+      "page": 405,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "G.4 Natural Field Methods",
+      "page": 416,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "G.5 Discussion",
+      "page": 422,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "G.6 Summary",
+      "page": 425,
+      "sections": [
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 425
+        },
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 425
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 428
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "H - Petrophysical Applications",
+      "page": 429,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "H.1 Introduction",
+      "page": 429,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "H.2 Petrophysical Data Sources and Databases",
+      "page": 430,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "H.3 Lithology Determination",
+      "page": 438,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "H.4 Net-Pay (or Pay/Nonpay) Determination",
+      "page": 442,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "H.5 Porosity Determination",
+      "page": 449,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "H.6 Fluid-Contacts Identification",
+      "page": 458,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "H.7 Water-Saturation Determination",
+      "page": 460,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "H.8 Permeability Determination",
+      "page": 479,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "H.9 Petrophysical Case Studies",
+      "page": 482,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "H.10 Other Considerations in Petrophysical Calculations",
+      "page": 491,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": "H.11 Summary and Conclusions",
+      "page": 495,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 496
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 500
+        }
+      ]
+    },
+    {
+      "num": "4",
+      "title": "Production Logging",
+      "page": 503,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".1 Introduction",
+      "page": 503,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".2 Misconceptions About Production Logging",
+      "page": 504,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".3 Origin of Flow Problems",
+      "page": 505,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".4 Safety and Environmental Tips",
+      "page": 506,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".5 Sinker Bar Weight",
+      "page": 507,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".6 Depth Control",
+      "page": 509,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".7 Pricing and Record Keeping",
+      "page": 510,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".8 Operating Principles and Performance of Production-Logging Tools",
+      "page": 511,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".9 Production-Logging Suite Examples",
+      "page": 543,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".10 Summary",
+      "page": 550,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 550
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 551
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 556
+        },
+        {
+          "num": "",
+          "title": "Appendix\u2014Production-Logging Application Tables: Tool Selection, Operating",
+          "page": 557
+        },
+        {
+          "num": "",
+          "title": "Procedures, and Interpretation Aids",
+          "page": 557
+        }
+      ]
+    },
+    {
+      "num": "5",
+      "title": "The Single-Well Chemical Tracer Test\u2014A Method For Measuring Reservoir Fluid Saturations In Situ",
+      "page": 623,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".1 Introduction",
+      "page": 623,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".2 History",
+      "page": 623,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".3 Measuring Sor",
+      "page": 623,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".4 Measuring Swc",
+      "page": 625,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".5 SWCT Sor Tests",
+      "page": 626,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".6 Other Field Measurements",
+      "page": 651,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".7 Summary",
+      "page": 654,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 654
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 656
+        }
+      ]
+    },
+    {
+      "num": "6",
+      "title": "Well-To-Well Tracer Tests",
+      "page": 659,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".1 Introduction",
+      "page": 659,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".2 Types of Tracers Available",
+      "page": 660,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".3 Tracer Flow in Porous Reservoir Rock",
+      "page": 667,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".4 Planning and Design of Tracer Tests",
+      "page": 674,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".5 Interpretation of Field Data",
+      "page": 678,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".6 Field Experience",
+      "page": 683,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 686
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 689
+        }
+      ]
+    },
+    {
+      "num": "7",
+      "title": "Reservoir Pressure and Temperature",
+      "page": 691,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".1 Introduction",
+      "page": 691,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".2 Reservoir Pressure",
+      "page": 691,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".3 Reservoir Temperature",
+      "page": 693,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".4 Metrology of Bottomhole Pressure and Temperature Gauges",
+      "page": 694,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".5 Calibration and Standard Evaluation Tests for Pressure Gauges",
+      "page": 695,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".6 Metrology of Temperature Gauges",
+      "page": 696,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".7 Pressure Transducer Technology",
+      "page": 697,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".8 Temperature Sensors",
+      "page": 699,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".9 Optical Fiber Measurement of Pressure and Temperature",
+      "page": 700,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".10 Acquiring Bottomhole Pressure and Temperature Data",
+      "page": 700,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".11 Wellhead Environments",
+      "page": 706,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".12 Specific Applications and Interpretation",
+      "page": 707,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".13 Pressure Transient Testing",
+      "page": 715,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 723
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 725
+        }
+      ]
+    },
+    {
+      "num": "8",
+      "title": "Fluid Flow Through Permeable Media",
+      "page": 727,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".1 Overview",
+      "page": 727,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".2 Basic Concepts",
+      "page": 727,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".3 Type Curves",
+      "page": 747,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".4 Damage and Stimulation",
+      "page": 756,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".5 Modifications for Gases and Multiphase Flow",
+      "page": 764,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".6 Diagnostic Plot",
+      "page": 772,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".7 Behavior of Bounded Reservoirs",
+      "page": 778,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".8 Estimating Average Reservoir Pressure",
+      "page": 784,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".9 Hydraulically Fractured Wells",
+      "page": 793,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".10 Naturally Fractured Reservoirs",
+      "page": 804,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".11 Horizontal Well Analysis",
+      "page": 813,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".12 Deliverability Testing of Gas Wells",
+      "page": 847,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".13 Coning",
+      "page": 880,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 887
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 896
+        },
+        {
+          "num": "",
+          "title": "Appendix",
+          "page": 897
+        }
+      ]
+    },
+    {
+      "num": "9",
+      "title": "Oil Reservoir Primary Drive Mechanisms",
+      "page": 903,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".1 Introduction",
+      "page": 903,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".2 Volatile- and Black-Oil Fluid Characteristics",
+      "page": 904,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".3 Types of Reservoir Energy",
+      "page": 906,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".4 Producing Mechanisms",
+      "page": 907,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".5 Fluid Properties",
+      "page": 911,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".6 Material Balance",
+      "page": 913,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".7 Solution-Gas Drives",
+      "page": 918,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".8 Gas-Cap Drives",
+      "page": 928,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".9 Waterdrives",
+      "page": 939,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".10 Compaction Drives",
+      "page": 964,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".11 Water and Gas Coning",
+      "page": 969,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 981
+        },
+        {
+          "num": "",
+          "title": "Appendix\u2014Key Equations in SI Units",
+          "page": 988
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 988
+        }
+      ]
+    },
+    {
+      "num": "10",
+      "title": "Gas Reservoirs",
+      "page": 989,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".1 Introduction",
+      "page": 989,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".2 Properties of Natural Gases",
+      "page": 989,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".3 Petrophysical Properties",
+      "page": 1002,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".4 Well Performance",
+      "page": 1003,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".5 Volumes and Recovery",
+      "page": 1022,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".6 Forecasting",
+      "page": 1033,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".7 Summary",
+      "page": 1040,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1040
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1044
+        }
+      ]
+    },
+    {
+      "num": "11",
+      "title": "Waterflooding",
+      "page": 1045,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".1 Introduction",
+      "page": 1045,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".2 Microscopic Efficiency of Immiscible Displacement",
+      "page": 1048,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".3 Macroscopic Displacement Efficiency of a Linear Waterflood",
+      "page": 1060,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".4 Reservoir-Geology Considerations in the Design and Operation of Waterfloods",
+      "page": 1063,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".5 Immiscible Displacement in Two Dimensions\u2014Areal",
+      "page": 1065,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".6 Vertical Displacement in Linear and Areal Models",
+      "page": 1073,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".7 Waterflood Design",
+      "page": 1080,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".8 Waterflood Monitoring",
+      "page": 1088,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".9 Waterflood Field-Case-Studies Examples",
+      "page": 1095,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".10 Summary and Conclusions",
+      "page": 1103,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1104
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 1105
+        },
+        {
+          "num": "",
+          "title": "Appendix A\u2014Cross-Referencing to Willhite2",
+          "page": 1109
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1109
+        }
+      ]
+    },
+    {
+      "num": "12",
+      "title": "Immiscible Gas Injection in Oil Reservoirs",
+      "page": 1111,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".1 Introduction",
+      "page": 1111,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".2 Microscopic and Macroscopic Displacement Efficiency of Immiscible Gas",
+      "page": 1113,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".3 Gas/Oil Compositional Effects During Immiscible Gas Displacement",
+      "page": 1121,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".4 Reservoir Geology Considerations Regarding Immiscible Gas Displacement",
+      "page": 1123,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".5 General Immiscible Gas/Oil Displacement Techniques",
+      "page": 1126,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".6 Vertical or Gravity Drainage Gas Displacement",
+      "page": 1128,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".7 Calculation Methods for Immiscible Gas Displacement",
+      "page": 1130,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".8 Immiscible Gasflood Monitoring",
+      "page": 1140,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".9 Field Case Studies: Immiscible Gas Injection Examples",
+      "page": 1141,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".10 Miscellaneous",
+      "page": 1150,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".11 Summary and Conclusions",
+      "page": 1151,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1152
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1155
+        }
+      ]
+    },
+    {
+      "num": "13",
+      "title": "Polymers, Gels, Foams, and Resins",
+      "page": 1157,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".1 Introduction",
+      "page": 1157,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".2 Conformance Improvement",
+      "page": 1158,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".3 Conformance Problems",
+      "page": 1160,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".4 Disproportionate Permeability Reduction",
+      "page": 1165,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".5 Polymers",
+      "page": 1167,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".6 Gels",
+      "page": 1194,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".7 Foams",
+      "page": 1231,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".8 Resins",
+      "page": 1248,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".9 Summary",
+      "page": 1255,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1256
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 1258
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1268
+        }
+      ]
+    },
+    {
+      "num": "14",
+      "title": "Miscible Processes",
+      "page": 1269,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".1 Introduction",
+      "page": 1269,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".2 Introductory Concepts",
+      "page": 1269,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".3 Designing a Miscible Flood",
+      "page": 1272,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".4 Compositional Numerical Simulation",
+      "page": 1279,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".5 Prediction of Compositionally Enhanced Solvent Flood Behavior",
+      "page": 1289,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".6 Field Examples",
+      "page": 1300,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".7 Summary",
+      "page": 1311,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1311
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 1312
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1316
+        }
+      ]
+    },
+    {
+      "num": "15",
+      "title": "Thermal Recovery by Steam Injection",
+      "page": 1317,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".1 Steam",
+      "page": 1317,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".2 Reservoir Heating",
+      "page": 1319,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".3 Steam Zone Growth",
+      "page": 1322,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".4 Steamflood Design",
+      "page": 1327,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".5 Design Calculations: Viscous Displacement Models",
+      "page": 1332,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".6 Design Calculations: Gravity Drainage Models",
+      "page": 1334,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".7 Design Calculations: Other Models",
+      "page": 1337,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".8 Cyclic Steam Stimulation Design",
+      "page": 1340,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".9 Design Calculations",
+      "page": 1341,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".10 Process Optimization",
+      "page": 1344,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".11 Steam Delivery Systems",
+      "page": 1346,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".12 Heat Management",
+      "page": 1353,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".13 Horizontal Well Applications in Steam Injection\u2014S. M. Farouq Ali, Consultant",
+      "page": 1358,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1365
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1373
+        }
+      ]
+    },
+    {
+      "num": "16",
+      "title": "In-Situ Combustion",
+      "page": 1375,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".1 Introduction",
+      "page": 1375,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".2 Process Description",
+      "page": 1375,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".3 Laboratory Studies",
+      "page": 1378,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".4 Combining Material- and Heat-Balance Calculations",
+      "page": 1382,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".5 Design Considerations",
+      "page": 1392,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".6 Performance Prediction",
+      "page": 1393,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".7 Operating Practices",
+      "page": 1394,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".8 Field Experience",
+      "page": 1399,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".9 Screening Guidelines",
+      "page": 1401,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".10 Conclusions",
+      "page": 1402,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1402
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1406
+        }
+      ]
+    },
+    {
+      "num": "17",
+      "title": "Reservoir Simulation",
+      "page": 1407,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".1 Introduction\u2014K.H. Coats",
+      "page": 1407,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".2 Linear Solver\u2014John Wallis and J.W. Watts",
+      "page": 1419,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".3 Gridding in Reservoir Simulation\u2014Dave Ponting",
+      "page": 1423,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".4 Upscaling of Grid Properties\u2014Alan Grindheim",
+      "page": 1430,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".5 Streamline Simulation\u2014Rod P. Batycky and Marco R. Thiele",
+      "page": 1445,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".6 Simulation of Geomechanics\u2014Tony Settari",
+      "page": 1452,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".7 Pressure/Volume/Temperature (PVT) Treatment\u2014Curtis H. Whitson",
+      "page": 1457,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".8 High-Performance Computing and Reservoir Simulation\u2014John E. Killough",
+      "page": 1464,
+      "sections": []
+    },
+    {
+      "num": "17",
+      "title": ".9 Reservoir Simulation Applications\u2014L. Kent Thomas",
+      "page": 1469,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1473
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1485
+        }
+      ]
+    },
+    {
+      "num": "18",
+      "title": "Estimation of Primary Reserves of Crude Oil, Natural Gas, and Condensate",
+      "page": 1487,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".1 Introduction",
+      "page": 1487,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".2 Reserves Definitions",
+      "page": 1489,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".3 Calculation Procedures",
+      "page": 1497,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".4 Estimation Methods",
+      "page": 1498,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".5 Special Problems*",
+      "page": 1542,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".6 Probabilistic Procedures",
+      "page": 1559,
+      "sections": []
+    },
+    {
+      "num": "18",
+      "title": ".7 Pitfalls*",
+      "page": 1562,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1568
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1578
+        }
+      ]
+    },
+    {
+      "num": "19",
+      "title": "Valuation of Oil and Gas Reserves",
+      "page": 1579,
+      "sections": []
+    },
+    {
+      "num": "19",
+      "title": ".1 Introduction",
+      "page": 1579,
+      "sections": []
+    },
+    {
+      "num": "19",
+      "title": ".2 The Need for Economic Evaluations",
+      "page": 1581,
+      "sections": []
+    },
+    {
+      "num": "19",
+      "title": ".3 Evaluation Methods",
+      "page": 1582,
+      "sections": []
+    },
+    {
+      "num": "19",
+      "title": ".4 The Nature of Reserves Reports and Discounted Cash Flow Schedules",
+      "page": 1586,
+      "sections": []
+    },
+    {
+      "num": "19",
+      "title": ".5 The Nature of Risk and Uncertainty",
+      "page": 1593,
+      "sections": []
+    },
+    {
+      "num": "19",
+      "title": ".6 Methods to Adjust for Risk and Uncertainty",
+      "page": 1594,
+      "sections": []
+    },
+    {
+      "num": "19",
+      "title": ".7 The Effect of Federal Income Taxes on U.S. Acquisition Economics",
+      "page": 1597,
+      "sections": []
+    },
+    {
+      "num": "19",
+      "title": ".8 Fair Market Value",
+      "page": 1599,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1602
+        },
+        {
+          "num": "",
+          "title": "Appendix A\u2014Description of Asset",
+          "page": 1603
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1606
+        }
+      ]
+    },
+    {
+      "num": "20",
+      "title": "Reservoir Management Programs",
+      "page": 1607,
+      "sections": []
+    },
+    {
+      "num": "20",
+      "title": ".1 Introduction",
+      "page": 1607,
+      "sections": []
+    },
+    {
+      "num": "20",
+      "title": ".2 Reservoir Management Processes",
+      "page": 1607,
+      "sections": []
+    },
+    {
+      "num": "20",
+      "title": ".3 Measuring Reservoir Management Performance",
+      "page": 1615,
+      "sections": []
+    },
+    {
+      "num": "20",
+      "title": ".4 Examples of Reservoir Management Benefits",
+      "page": 1619,
+      "sections": []
+    },
+    {
+      "num": "20",
+      "title": ".5 Summary",
+      "page": 1628,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 1628
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 1630
+        }
+      ]
+    },
+    {
+      "num": "280",
+      "title": "Author Index",
+      "page": 1631,
+      "sections": []
+    },
+    {
+      "num": "281",
+      "title": "Subject Index",
+      "page": 1635,
+      "sections": []
+    }
+  ]
+}

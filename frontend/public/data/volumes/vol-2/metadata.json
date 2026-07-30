@@ -1,0 +1,1250 @@
+{
+  "vol_id": "vol-2",
+  "title": "Volume 2: Drilling Engineering",
+  "filename": "Vol 2.pdf",
+  "page_count": 770,
+  "total_words": 304612,
+  "ocr_pages_count": 8,
+  "toc": [
+    {
+      "num": "1",
+      "title": "Geomechanics Applied to Drilling Engineering",
+      "page": 8,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".1 Introduction",
+      "page": 8,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".2 Stress, Pore Pressure, and Effective Stress",
+      "page": 9,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".3 Rock Properties",
+      "page": 19,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".4 Elastic Wellbore Stress Concentration",
+      "page": 26,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".5 Determining Stress Orientation",
+      "page": 35,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".6 Building the Geomechanical Model",
+      "page": 42,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".7 Predicting Wellbore Stability",
+      "page": 60,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".8 Other Models for Wellbore Stability",
+      "page": 72,
+      "sections": []
+    },
+    {
+      "num": "1",
+      "title": ".9 Making Decisions in Real Time",
+      "page": 84,
+      "sections": [
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 87
+        },
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 87
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 89
+        },
+        {
+          "num": "",
+          "title": "General References",
+          "page": 91
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 94
+        }
+      ]
+    },
+    {
+      "num": "2",
+      "title": "Drilling Fluids",
+      "page": 96,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".1 Introduction",
+      "page": 96,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".2 Basic Functions of a Drilling Fluid",
+      "page": 97,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".3 Types of Drilling Fluids",
+      "page": 99,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".4 Drilling-Fluids Testing",
+      "page": 103,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".5 Challenges Related to Drilling Fluid",
+      "page": 106,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".6 Special Drilling Situations",
+      "page": 112,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".7 Environmental Considerations",
+      "page": 114,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".8 Solids Control and Waste Management",
+      "page": 120,
+      "sections": []
+    },
+    {
+      "num": "2",
+      "title": ".9 Drilling-Fluid Considerations",
+      "page": 123,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 123
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 123
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 125
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "title": "Fluid Mechanics for Drilling",
+      "page": 126,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".1 Introduction",
+      "page": 126,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".2 Overview",
+      "page": 126,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".3 Governing Equations",
+      "page": 127,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".4 Key Considerations for Wellbore Hydraulic Simulation",
+      "page": 129,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".5 Static Wellbore Pressure Solutions",
+      "page": 130,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".6 Flowing Wellbore Pressure Solutions",
+      "page": 130,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".7 General Steady Flow Wellbore Pressure Solutions",
+      "page": 132,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".8 Calculating Pressures in a Wellbore",
+      "page": 134,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".9 Surge Pressure Prediction",
+      "page": 135,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".10 Fluid Friction",
+      "page": 141,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".11 Dynamic Pressure Prediction",
+      "page": 158,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".12 Cuttings Transport",
+      "page": 162,
+      "sections": []
+    },
+    {
+      "num": "3",
+      "title": ".13 Sample Calculations",
+      "page": 177,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 181
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 184
+        },
+        {
+          "num": "",
+          "title": "General References",
+          "page": 185
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 190
+        }
+      ]
+    },
+    {
+      "num": "4",
+      "title": "Well Control: Procedures and Principles",
+      "page": 192,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".1 Introduction to Kicks",
+      "page": 192,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".2 Kick Detection and Monitoring With MWD Tools",
+      "page": 197,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".3 Shut-In Procedures",
+      "page": 197,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".4 Obtaining and Interpreting Shut-In Pressures",
+      "page": 200,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".5 Kick Identification",
+      "page": 204,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".6 Kill-Weight Mud Calculation",
+      "page": 205,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".7 Well-Control Procedures",
+      "page": 207,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".8 Choosing the Best Method",
+      "page": 209,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".9 Variables Affecting Kill Procedures",
+      "page": 213,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".10 Implementation of the One-Circulation Method",
+      "page": 217,
+      "sections": []
+    },
+    {
+      "num": "4",
+      "title": ".11 Nonconventional Well-Control Procedures",
+      "page": 224,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 225
+        },
+        {
+          "num": "",
+          "title": "General References",
+          "page": 225
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 226
+        }
+      ]
+    },
+    {
+      "num": "5",
+      "title": "Introduction to Roller-Cone and Polycrystalline Diamond Drill Bits",
+      "page": 228,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".1 Introduction",
+      "page": 228,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".2 Roller-Cone Drill Bits",
+      "page": 228,
+      "sections": []
+    },
+    {
+      "num": "5",
+      "title": ".3 PDC Drill Bits",
+      "page": 246,
+      "sections": [
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 270
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 270
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 271
+        }
+      ]
+    },
+    {
+      "num": "6",
+      "title": "Directional Drilling",
+      "page": 272,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".1 Introduction to Directional Drilling",
+      "page": 272,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".2 Directional-Well Profiles",
+      "page": 273,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".3 Directional Survey",
+      "page": 279,
+      "sections": []
+    },
+    {
+      "num": "6",
+      "title": ".4 BHA Design for Directional Control",
+      "page": 285,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 291
+        },
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 291
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 291
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 293
+        }
+      ]
+    },
+    {
+      "num": "7",
+      "title": "Casing Design",
+      "page": 294,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".1 Introduction",
+      "page": 294,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".2 Casing",
+      "page": 294,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".3 Tubing",
+      "page": 295,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".4 Properties of Casing and Tubing",
+      "page": 295,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".5 Pipe Strength",
+      "page": 295,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".6 API Connection Ratings",
+      "page": 306,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".7 Connection Failures",
+      "page": 310,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".8 Connection Design Limits",
+      "page": 310,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".9 Casing and Tubing Buckling",
+      "page": 310,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".10 Loads on Casing and Tubing Strings",
+      "page": 317,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".11 External Pressure Loads",
+      "page": 318,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".12 Internal Pressure Loads",
+      "page": 318,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".13 Mechanical Loads",
+      "page": 321,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".14 Thermal Loads and Temperature Effects",
+      "page": 323,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".15 Casing Design",
+      "page": 324,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".16 Design Objectives",
+      "page": 324,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".17 Design Method",
+      "page": 324,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".18 Required Information",
+      "page": 325,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".19 Preliminary Design",
+      "page": 325,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".20 Detailed Design",
+      "page": 329,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".21 Sample Design Calculations",
+      "page": 330,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".22 Arctic Well Completions",
+      "page": 333,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".23 Risk-Based Casing Design",
+      "page": 337,
+      "sections": []
+    },
+    {
+      "num": "7",
+      "title": ".24 Critique of Risk-Based Design",
+      "page": 342,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 342
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 345
+        },
+        {
+          "num": "",
+          "title": "General References",
+          "page": 345
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 349
+        }
+      ]
+    },
+    {
+      "num": "8",
+      "title": "Introduction to Wellhead Systems",
+      "page": 350,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".1 Drilling a Well on Land",
+      "page": 350,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".2 Drilling a Well Offshore From a Jackup Drilling Rig Using Mudline Suspension Equipment",
+      "page": 356,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".3 The Unitized Wellhead",
+      "page": 361,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".4 Drilling a Well Subsea",
+      "page": 365,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".5 Big Bore Subsea Wellhead Systems",
+      "page": 371,
+      "sections": []
+    },
+    {
+      "num": "8",
+      "title": ".6 Summary",
+      "page": 371,
+      "sections": [
+        {
+          "num": "",
+          "title": "General References",
+          "page": 374
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 375
+        }
+      ]
+    },
+    {
+      "num": "9",
+      "title": "Cementing",
+      "page": 376,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".1 Cementing Operations",
+      "page": 376,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".2 Well Parameters",
+      "page": 377,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".3 Cement-Placement Design",
+      "page": 378,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".4 Remedial Cementing",
+      "page": 381,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".5 Hole Preparation",
+      "page": 386,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".6 Cement Composition",
+      "page": 389,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".7 Cement Hydration",
+      "page": 397,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".8 Slurry Design",
+      "page": 401,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".9 Additives",
+      "page": 403,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".10 Water-Insoluble Materials",
+      "page": 413,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".11 Water-Soluble Materials",
+      "page": 414,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".12 Slurry-Design Testing",
+      "page": 418,
+      "sections": []
+    },
+    {
+      "num": "9",
+      "title": ".13 Cementing Hardware",
+      "page": 419,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 434
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 434
+        },
+        {
+          "num": "",
+          "title": "General References",
+          "page": 434
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 438
+        }
+      ]
+    },
+    {
+      "num": "10",
+      "title": "Drilling Problems and Solutions",
+      "page": 440,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".1 Introduction",
+      "page": 440,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".2 Pipe Sticking",
+      "page": 440,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".3 Loss of Circulation",
+      "page": 444,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".4 Hole Deviation",
+      "page": 446,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".5 Drillpipe Failures",
+      "page": 447,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".6 Borehole Instability",
+      "page": 448,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".7 Mud Contamination",
+      "page": 451,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".8 Producing Formation Damage",
+      "page": 452,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".9 Hole Cleaning",
+      "page": 454,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".10 Hydrogen-Sulfide-Bearing Zones and Shallow Gas",
+      "page": 456,
+      "sections": []
+    },
+    {
+      "num": "10",
+      "title": ".11 Equipment and Personnel-Related Problems",
+      "page": 457,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 458
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 458
+        },
+        {
+          "num": "",
+          "title": "General References",
+          "page": 459
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 461
+        }
+      ]
+    },
+    {
+      "num": "11",
+      "title": "Introduction to Well Planning",
+      "page": 462,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".1 Well Planning",
+      "page": 462,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".2 Data Collection",
+      "page": 466,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".3 Casing Setting-Depth Selection",
+      "page": 480,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".4 Hole-Geometry Selection",
+      "page": 492,
+      "sections": []
+    },
+    {
+      "num": "11",
+      "title": ".5 Preparation of Authority for Expenditures (AFE)",
+      "page": 500,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 524
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 524
+        },
+        {
+          "num": "",
+          "title": "General References",
+          "page": 524
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 525
+        }
+      ]
+    },
+    {
+      "num": "12",
+      "title": "Underbalanced Drilling",
+      "page": 526,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".1 What is Underbalanced Drilling?",
+      "page": 526,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".2 Drilling Fluid Systems",
+      "page": 535,
+      "sections": []
+    },
+    {
+      "num": "12",
+      "title": ".3 Downhole Equipment for UBD Operations",
+      "page": 550,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 571
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 571
+        },
+        {
+          "num": "",
+          "title": "General References",
+          "page": 571
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 576
+        }
+      ]
+    },
+    {
+      "num": "13",
+      "title": "Emerging Drilling Technologies",
+      "page": 578,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".1 Introduction",
+      "page": 578,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".2 Offshore",
+      "page": 579,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".3 Onshore",
+      "page": 583,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".4 Materials",
+      "page": 587,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".5 Microsystems",
+      "page": 591,
+      "sections": []
+    },
+    {
+      "num": "13",
+      "title": ".6 Federally Funded Drilling Projects",
+      "page": 593,
+      "sections": [
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 593
+        },
+        {
+          "num": "",
+          "title": "Disclaimer",
+          "page": 594
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 594
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 595
+        }
+      ]
+    },
+    {
+      "num": "14",
+      "title": "Offshore Drilling Units",
+      "page": 596,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".1 Introduction",
+      "page": 596,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".2 History and Evolution",
+      "page": 597,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".3 Rig Types, Designs, and Capabilities",
+      "page": 609,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".4 Other Considerations",
+      "page": 626,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".5 Classification, Registration, and Regulations",
+      "page": 643,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".6 Relationship Between the Drilling Contractor and Operator",
+      "page": 645,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".7 Picking the Right Unit for the Job",
+      "page": 646,
+      "sections": []
+    },
+    {
+      "num": "14",
+      "title": ".8 The Future",
+      "page": 649,
+      "sections": [
+        {
+          "num": "",
+          "title": "Acknowledgments",
+          "page": 650
+        },
+        {
+          "num": "",
+          "title": "Acronyms and Definitions",
+          "page": 651
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 652
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 652
+        }
+      ]
+    },
+    {
+      "num": "15",
+      "title": "Drilling-Data Acquisition",
+      "page": 654,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".1 Introduction",
+      "page": 654,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".2 Surface-Data Sensors",
+      "page": 654,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".3 MWD and LWD Applications",
+      "page": 659,
+      "sections": []
+    },
+    {
+      "num": "15",
+      "title": ".4 Drilling-Data Management and Reporting",
+      "page": 678,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 685
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 685
+        },
+        {
+          "num": "",
+          "title": "General References",
+          "page": 686
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 692
+        }
+      ]
+    },
+    {
+      "num": "16",
+      "title": "Coiled-Tubing Well Intervention and Drilling Operations",
+      "page": 694,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".1 Birth of Coiled-Tubing (CT) Technology",
+      "page": 694,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".2 Modern CT Technology",
+      "page": 696,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".3 CT Equipment Design",
+      "page": 697,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".4 Coiled Tubing",
+      "page": 713,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".5 CT Performance",
+      "page": 715,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".6 Commonly Used Bend-Cycle Fatigue Derating Methods",
+      "page": 725,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".7 CT Management",
+      "page": 729,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".8 CT Applications",
+      "page": 730,
+      "sections": []
+    },
+    {
+      "num": "16",
+      "title": ".9 Coiled Tubing Drilling",
+      "page": 734,
+      "sections": [
+        {
+          "num": "",
+          "title": "Nomenclature",
+          "page": 746
+        },
+        {
+          "num": "",
+          "title": "References",
+          "page": 746
+        },
+        {
+          "num": "",
+          "title": "General References",
+          "page": 747
+        },
+        {
+          "num": "",
+          "title": "SI Metric Conversion Factors",
+          "page": 749
+        }
+      ]
+    }
+  ]
+}

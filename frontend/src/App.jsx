@@ -19,46 +19,63 @@ export default function App() {
   const [isRightPanelOpen, setIsRightPanelOpen] = useState(true);
   const [theme, setTheme] = useState('dark');
 
-  // User personalization state
-  const [userState, setUserState] = useState({
-    bookmarks: [],
-    notes: [],
-    history: []
+  // User state
+  const [userState, setUserState] = useState(() => {
+    const saved = localStorage.getItem('petroleum_user_state');
+    return saved ? JSON.parse(saved) : { bookmarks: [], notes: [], history: [] };
   });
 
-  // Fetch Collection Metadata
+  useEffect(() => {
+    localStorage.setItem('petroleum_user_state', JSON.stringify(userState));
+  }, [userState]);
+
+  // Fetch Collection Metadata (API with Static Fallback)
   useEffect(() => {
     fetch('/api/collection')
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error('API offline');
+        return res.json();
+      })
       .then((data) => setCollectionData(data))
-      .catch((err) => console.error('Failed to load collection metadata:', err));
-
-    fetch('/api/user/state')
-      .then((res) => res.json())
-      .then((data) => setUserState(data))
-      .catch((err) => console.error('Failed to load user state:', err));
+      .catch(() => {
+        // Fallback to static JSON file for GitHub Pages
+        fetch('./data/global/collection.json')
+          .then((res) => res.json())
+          .then((data) => setCollectionData(data))
+          .catch((err) => console.error('Failed to load static collection:', err));
+      });
   }, []);
 
-  // Fetch Current Page Metadata & Text
+  // Fetch Current Page Metadata & Text (API with Static Fallback)
   useEffect(() => {
     if (!selectedVol || !activePdfPage) return;
+
     fetch(`/api/page/${selectedVol}/${activePdfPage}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setPageData(data);
-        // Track History
-        fetch('/api/user/history', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            vol_id: selectedVol,
-            pdf_page: activePdfPage,
-            chapter_title: data.chapter_title,
-            timestamp: new Date().toISOString()
-          })
-        });
+      .then((res) => {
+        if (!res.ok) throw new Error('API offline');
+        return res.json();
       })
-      .catch((err) => console.error('Failed to load page data:', err));
+      .then((data) => setPageData(data))
+      .catch(() => {
+        // Fallback to static pages JSON for GitHub Pages
+        fetch(`./data/volumes/${selectedVol}/pages.json`)
+          .then((res) => res.json())
+          .then((pages) => {
+            const match = pages.find((p) => p.pdf_page === activePdfPage) || pages[0];
+            setPageData({
+              vol_id: selectedVol,
+              pdf_page: activePdfPage,
+              printed_page: match?.printed_page || activePdfPage,
+              chapter_num: match?.chapter_num || '1',
+              chapter_title: match?.chapter_title || 'General Engineering',
+              section_num: match?.section_num || '',
+              section_title: match?.section_title || '',
+              references: match?.references || [],
+              text_content: match?.text_content || 'Handbook content page preview.'
+            });
+          })
+          .catch((err) => console.error('Failed to load static page data:', err));
+      });
   }, [selectedVol, activePdfPage]);
 
   // Keyboard Shortcuts Handler
@@ -79,35 +96,27 @@ export default function App() {
   }, [activePdfPage, selectedVol, collectionData]);
 
   const handleAddBookmark = (bm) => {
-    fetch('/api/user/bookmark', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(bm)
-    })
-      .then((res) => res.json())
-      .then((data) => setUserState((prev) => ({ ...prev, bookmarks: data.bookmarks })));
+    const newBm = { ...bm, id: `bm_${Date.now()}` };
+    setUserState((prev) => ({ ...prev, bookmarks: [...prev.bookmarks, newBm] }));
   };
 
   const handleDeleteBookmark = (bmId) => {
-    fetch(`/api/user/bookmark/${bmId}`, { method: 'DELETE' })
-      .then((res) => res.json())
-      .then((data) => setUserState((prev) => ({ ...prev, bookmarks: data.bookmarks })));
+    setUserState((prev) => ({
+      ...prev,
+      bookmarks: prev.bookmarks.filter((b) => b.id !== bmId && b.pdf_page !== bmId)
+    }));
   };
 
   const handleAddNote = (note) => {
-    fetch('/api/user/note', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(note)
-    })
-      .then((res) => res.json())
-      .then((data) => setUserState((prev) => ({ ...prev, notes: data.notes })));
+    const newNote = { ...note, id: `note_${Date.now()}` };
+    setUserState((prev) => ({ ...prev, notes: [...prev.notes, newNote] }));
   };
 
   const handleDeleteNote = (noteId) => {
-    fetch(`/api/user/note/${noteId}`, { method: 'DELETE' })
-      .then((res) => res.json())
-      .then((data) => setUserState((prev) => ({ ...prev, notes: data.notes })));
+    setUserState((prev) => ({
+      ...prev,
+      notes: prev.notes.filter((n) => n.id !== noteId)
+    }));
   };
 
   const toggleTheme = () => {
@@ -177,6 +186,7 @@ export default function App() {
 
       <SearchModal
         isOpen={isSearchOpen}
+        selectedVol={selectedVol}
         onClose={() => setIsSearchOpen(false)}
         onSelectResult={(vol_id, pdf_page, q) => {
           setSelectedVol(vol_id);
