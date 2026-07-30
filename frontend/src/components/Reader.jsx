@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Columns, FileText, Image as ImageIcon } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut, Columns, FileText, BookOpen } from 'lucide-react';
 
 export default function Reader({
   volId,
@@ -11,21 +11,14 @@ export default function Reader({
   searchQuery
 }) {
   const [zoom, setZoom] = useState(100);
-  const [viewMode, setViewMode] = useState('text'); // User can toggle between 'canvas' (Image) and 'text' (Text-Only)
-  const [imgError, setImgError] = useState(false);
+  const [viewMode, setViewMode] = useState('pdf'); // Default to Interactive PDF Viewer Mode!
 
   const handlePrev = () => {
-    if (pdfPage > 1) {
-      setImgError(false);
-      onNavigate(pdfPage - 1);
-    }
+    if (pdfPage > 1) onNavigate(pdfPage - 1);
   };
 
   const handleNext = () => {
-    if (pdfPage < totalPages) {
-      setImgError(false);
-      onNavigate(pdfPage + 1);
-    }
+    if (pdfPage < totalPages) onNavigate(pdfPage + 1);
   };
 
   const handleZoomIn = () => setZoom((z) => Math.min(z + 15, 200));
@@ -43,8 +36,7 @@ export default function Reader({
     );
   };
 
-  const imageSrc = `/api/page-image/${volId}/${pdfPage}`;
-  const staticFallbackSrc = `./data/previews/${volId}/page_${pdfPage}.jpg`;
+  const pdfSrc = `./pdfs/${volId}.pdf#page=${pdfPage}&toolbar=1&navpanes=1`;
 
   return (
     <main className="reader-container">
@@ -61,10 +53,7 @@ export default function Reader({
               value={pdfPage}
               min={1}
               max={totalPages}
-              onChange={(e) => {
-                setImgError(false);
-                onNavigate(parseInt(e.target.value) || 1);
-              }}
+              onChange={(e) => onNavigate(parseInt(e.target.value) || 1)}
             />{' '}
             / {totalPages}
           </span>
@@ -79,35 +68,29 @@ export default function Reader({
         <div className="toolbar-group">
           {/* Explicit View Mode Toggle Buttons */}
           <button
-            className={`btn-accent ${viewMode === 'text' ? '' : 'btn-icon'}`}
+            className={`btn-accent ${viewMode === 'pdf' ? '' : 'btn-icon'}`}
             style={{
-              padding: '0.3rem 0.6rem',
+              padding: '0.3rem 0.65rem',
               fontSize: '0.8rem',
-              background: viewMode === 'text' ? 'var(--accent-amber)' : 'var(--bg-primary)',
-              color: viewMode === 'text' ? '#000' : 'var(--text-primary)'
+              background: viewMode === 'pdf' ? 'var(--accent-amber)' : 'var(--bg-primary)',
+              color: viewMode === 'pdf' ? '#000' : 'var(--text-primary)'
             }}
-            onClick={() => {
-              setViewMode('text');
-              setImgError(false);
-            }}
+            onClick={() => setViewMode('pdf')}
           >
-            <FileText size={15} /> 📄 Text-Only
+            <BookOpen size={15} /> 📄 Interactive PDF Viewer
           </button>
 
           <button
-            className={`btn-accent ${viewMode === 'canvas' ? '' : 'btn-icon'}`}
+            className={`btn-accent ${viewMode === 'text' ? '' : 'btn-icon'}`}
             style={{
-              padding: '0.3rem 0.6rem',
+              padding: '0.3rem 0.65rem',
               fontSize: '0.8rem',
-              background: viewMode === 'canvas' ? 'var(--accent-blue)' : 'var(--bg-primary)',
-              color: viewMode === 'canvas' ? '#fff' : 'var(--text-primary)'
+              background: viewMode === 'text' ? 'var(--accent-blue)' : 'var(--bg-primary)',
+              color: viewMode === 'text' ? '#fff' : 'var(--text-primary)'
             }}
-            onClick={() => {
-              setViewMode('canvas');
-              setImgError(false);
-            }}
+            onClick={() => setViewMode('text')}
           >
-            <ImageIcon size={15} /> 📷 Image View
+            <FileText size={15} /> 📝 Extracted Text View
           </button>
 
           <button className="btn-icon" onClick={handleZoomOut} title="Zoom Out">
@@ -120,47 +103,41 @@ export default function Reader({
             <ZoomIn size={16} />
           </button>
 
-          <button className="btn-icon" onClick={onOpenSplitView} title="Toggle Split View Mode">
+          <button className="btn-icon" onClick={onOpenSplitView} title="Toggle Side Panel">
             <Columns size={16} />
           </button>
         </div>
       </div>
 
-      <div className="reader-viewport">
-        <div
-          className="page-card"
-          style={{
-            transform: `scale(${zoom / 100})`,
-            transformOrigin: 'top center',
-            transition: 'transform 0.15s ease'
-          }}
-        >
-          <div className="page-header-strip">
-            <span>
-              {volId.toUpperCase()} — CH {pageData?.chapter_num || '1'}: {pageData?.chapter_title || 'General Engineering'}
-            </span>
-            <span>HANDBOOK PAGE {pageData?.printed_page || pdfPage} (PDF P. {pdfPage})</span>
-          </div>
-
-          {viewMode === 'canvas' && !imgError ? (
-            <div>
-              <div style={{ background: 'rgba(56, 189, 248, 0.15)', color: 'var(--accent-blue)', padding: '0.4rem 0.75rem', borderRadius: '4px', fontSize: '0.75rem', marginBottom: '1rem', fontWeight: 600 }}>
-                High-Resolution Original PDF Image View Active
-              </div>
-              <img
-                src={imageSrc}
-                onError={(e) => {
-                  if (e.target.src.includes('/api/')) {
-                    e.target.src = staticFallbackSrc;
-                  } else {
-                    setImgError(true);
-                  }
-                }}
-                alt={`Page ${pdfPage}`}
-                className="scanned-image-view"
-              />
+      <div className="reader-viewport" style={{ padding: viewMode === 'pdf' ? '0' : '1.5rem' }}>
+        {viewMode === 'pdf' ? (
+          <iframe
+            key={`${volId}-${pdfPage}`}
+            src={pdfSrc}
+            title={`PDF Viewer ${volId}`}
+            style={{
+              width: '100%',
+              height: '100%',
+              border: 'none',
+              background: '#1e293b'
+            }}
+          />
+        ) : (
+          <div
+            className="page-card"
+            style={{
+              transform: `scale(${zoom / 100})`,
+              transformOrigin: 'top center',
+              transition: 'transform 0.15s ease'
+            }}
+          >
+            <div className="page-header-strip">
+              <span>
+                {volId.toUpperCase()} — CH {pageData?.chapter_num || '1'}: {pageData?.chapter_title || 'General Engineering'}
+              </span>
+              <span>HANDBOOK PAGE {pageData?.printed_page || pdfPage} (PDF P. {pdfPage})</span>
             </div>
-          ) : (
+
             <div className="page-text-content" style={{ padding: '0.5rem 0' }}>
               {pageData?.text_content ? (
                 highlightedText(pageData.text_content)
@@ -170,8 +147,8 @@ export default function Reader({
                 </div>
               )}
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </main>
   );
